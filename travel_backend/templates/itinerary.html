@@ -1,0 +1,207 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Travel Assistant - Itinerary Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/itinerary.css">
+    
+</head>
+<body>
+    <div class="nta-container">
+     
+        <div class="nta-sidebar">
+            <div class="nta-logo">
+                <i class="fas fa-mountain"></i>Nepal Travel Assistant
+            </div>
+            <ul class="nta-nav-list">
+                <li><a href="homepage.html" class="nta-nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="trip-cost.html" class="nta-nav-link"><i class="fas fa-calculator"></i> Trip Cost Estimation</a></li>
+                <li><a href="destinations.html" class="nta-nav-link"><i class="fas fa-map-marked-alt"></i> Destination Recommendation</a></li>
+                <li><a href="itinerary.html" class="nta-nav-link active"><i class="fas fa-calendar-alt"></i> Itinerary Generator</a></li>
+                <li><a href="local-pricing.html" class="nta-nav-link"><i class="fas fa-exclamation-triangle"></i> Local Pricing & Scams</a></li>
+                <li><a href="packages.html" class="nta-nav-link"><i class="fas fa-gift"></i> Packages & Deals</a></li>
+                <li><a href="profile.html" class="nta-nav-link"><i class="fas fa-user-circle"></i> User Profile</a></li>
+            </ul>
+        </div>
+        
+      
+        <div class="nta-main">
+            <div class="nta-topbar">
+                <div class="nta-header-text">
+                    <h1>Nepal Travel Assistant</h1>
+                    <p>Your Himalayan Journey Planner</p>
+                </div>
+                <div class="nta-weather">
+                    <i class="fas fa-sun"></i> 22°C, Kathmandu
+                </div>
+            </div>
+            
+            <h2 class="nta-section-title">Personalized Itinerary Generator</h2>
+            <p class="nta-section-subtitle">Create detailed day-by-day itineraries with activities, timings, and costs</p>
+        
+            <div class="nta-itinerary-container">
+                <div class="nta-duration-badge">7 Days</div>
+                
+                <div class="nta-itinerary-scroll">
+                
+                    <div class="nta-day-card">
+                        <div class="nta-day-header">
+                            <div class="nta-day-title">Day 1 (Kathmandu)</div>
+                            <div class="nta-day-cost">$545</div>
+                        </div>
+                        
+                        <table class="nta-activity-table">
+                            <thead>
+                                <tr>
+                                    <th>Activity</th>
+                                    <th>Duration</th>
+                                    <th>Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="nta-activity-name">Arrival & Hotel Check-in</td>
+                                    <td class="nta-activity-duration">-</td>
+                                    <td class="nta-activity-cost">$0</td>
+                                </tr>
+                                <tr>
+                                    <td class="nta-activity-name">Durban Square Visit</td>
+                                    <td class="nta-activity-duration">2 hours</td>
+                                    <td class="nta-activity-cost">$15</td>
+                                </tr>
+                                <tr>
+                                    <td class="nta-activity-name">Swayambhunath Temple</td>
+                                    <td class="nta-activity-duration">2 hours</td>
+                                    <td class="nta-activity-cost">$5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                   
+                    <div class="nta-day-card">
+                        <div class="nta-day-header">
+                            <div class="nta-day-title">Day 2 (Kathmandu)</div>
+                            <div class="nta-day-cost">$320</div>
+                        </div>
+                        
+                        <table class="nta-activity-table">
+                            <thead>
+                                <tr>
+                                    <th>Activity</th>
+                                    <th>Duration</th>
+                                    <th>Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="nta-activity-name">Pashupatinath Temple</td>
+                                    <td class="nta-activity-duration">2 hours</td>
+                                    <td class="nta-activity-cost">$10</td>
+                                </tr>
+                                <tr>
+                                    <td class="nta-activity-name">Boudhanath Stupa</td>
+                                    <td class="nta-activity-duration">2 hours</td>
+                                    <td class="nta-activity-cost">$5</td>
+                                </tr>
+                                <tr>
+                                    <td class="nta-activity-name">Thamel Market Exploration</td>
+                                    <td class="nta-activity-duration">3 hours</td>
+                                    <td class="nta-activity-cost">$50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+        
+                    <div class="nta-day-card">
+                        <div class="nta-day-header">
+                            <div class="nta-day-title">Day 3 (Pokhara)</div>
+                            <div class="nta-day-cost">$420</div>
+                        </div>
+                        
+                        <table class="nta-activity-table">
+                            <thead>
+                                <tr>
+                                    <th>Activity</th>
+                                    <th>Duration</th>
+                                    <th>Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="nta-activity-name">Sarangkot Sunrise</td>
+                                    <td class="nta-activity-duration">3 hours</td>
+                                    <td class="nta-activity-cost">$15</td>
+                                </tr>
+                                <tr>
+                                    <td class="nta-activity-name">Paragliding</td>
+                                    <td class="nta-activity-duration">2 hours</td>
+                                    <td class="nta-activity-cost">$80</td>
+                                </tr>
+                                <tr>
+                                    <td class="nta-activity-name">Davis Falls</td>
+                                    <td class="nta-activity-duration">1 hour</td>
+                                    <td class="nta-activity-cost">$3</td>
+                                </tr>
+                                <tr>
+                                    <td class="nta-activity-name">Gupteshwor Cave</td>
+                                    <td class="nta-activity-duration">1 hour</td>
+                                    <td class="nta-activity-cost">$3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                   
+                    <div class="nta-day-card">
+                        <div class="nta-day-header">
+                            <div class="nta-day-title">Day 4 (Pokhara)</div>
+                            <div class="nta-day-cost">$280</div>
+                        </div>
+                        
+                        <table class="nta-activity-table">
+                            <thead>
+                                <tr>
+                                    <th>Activity</th>
+                                    <th>Duration</th>
+                                    <th>Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="nta-activity-name">Begnas Lake Visit</td>
+                                    <td class="nta-activity-duration">3 hours</td>
+                                    <td class="nta-activity-cost">$10</td>
+                                </tr>
+                                <tr>
+                                    <td class="nta-activity-name">Boating on Phewa Lake</td>
+                                    <td class="nta-activity-duration">2 hours</td>
+                                    <td class="nta-activity-cost">$20</td>
+                                </tr>
+                                <tr>
+                                    <td class="nta-activity-name">World Peace Pagoda</td>
+                                    <td class="nta-activity-duration">2 hours</td>
+                                    <td class="nta-activity-cost">$5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="nta-legend">
+                    <strong>Legend:</strong> The Additional Manual: Planner
+                </div>
+                
+                <div class="nta-action-buttons">
+                    <button class="nta-btn nta-btn-primary">Generate New Itinerary</button>
+                    <button class="nta-btn nta-btn-secondary">Export Itinerary</button>
+                    <button class="nta-btn nta-btn-secondary">Share Itinerary</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->

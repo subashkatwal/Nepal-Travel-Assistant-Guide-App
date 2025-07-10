@@ -1,0 +1,278 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join Nepal Travel Assistant</title>
+  <style>
+    /* Your existing styles here */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #e9fdf6, #fefce8);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+    .signup-wrapper {
+      max-width: 400px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+    .signup-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .signup-header img {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+    .signup-header h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .signup-header p {
+      color: #666;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .form-group-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 15px;
+    }
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 6px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 100%;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #21c5b5;
+    }
+    .terms {
+      display: flex;
+      align-items: flex-start;
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .terms input {
+      margin-right: 10px;
+      margin-top: 3px;
+    }
+    .terms a {
+      color: #21c5b5;
+      text-decoration: none;
+    }
+    .terms a:hover {
+      text-decoration: underline;
+    }
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(to right, #21c5b5, #f2c94c);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+    .submit-btn:hover {
+      opacity: 0.9;
+    }
+    .form-footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    .form-footer a {
+      color: #21c5b5;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Modal blur class, can be reused */
+    .blurred {
+      filter: blur(5px);
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-wrapper">
+    <div class="signup-header">
+      <img src="{% static 'images/mountains.png' %}" alt="Logo" />
+      <h2>Join Nepal Travel Assistant</h2>
+      <p>Create your account to start planning your Himalayan adventure</p>
+    </div>
+    <div class="signup-body">
+      <form method="post" action="{% url 'signup_page' %}">
+        {% csrf_token %}
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="id_first_name">First Name</label>
+            <input type="text" name="first_name" id="id_first_name" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label for="id_last_name">Last Name</label>
+            <input type="text" name="last_name" id="id_last_name" placeholder="Doe" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="id_email">Email Address</label>
+          <input type="email" name="email" id="id_email" placeholder="your@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="id_password1">Password</label>
+          <input type="password" name="password1" id="id_password1" placeholder="Create a strong password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="id_password2">Confirm Password</label>
+          <input type="password" name="password2" id="id_password2" placeholder="Confirm your password" required />
+        </div>
+
+        <div class="terms">
+          <input type="checkbox" name="agree_terms" id="id_agree_terms" required />
+          <label for="id_agree_terms">
+            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn">Create Account</button>
+
+        <div class="form-footer">
+          Already have an account? 
+          <a id="switchToLogin">Login here</a>
+          <div class="copyright" style="margin-top: 10px; font-size: 12px; color: #95a5a6;">
+            2025 Nepal Guide All rights reserved.
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Overlay for forms -->
+  <div id="modalOverlay" class="modal-overlay" style="display:none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index: 1000;">
+    <div id="modalContent" style="background: white; padding: 20px; border-radius: 10px; max-width: 500px; width: 100%;"></div>
+  </div>
+
+  <script>
+    const overlay = document.getElementById("modalOverlay");
+    const content = document.getElementById("modalContent");
+
+    // Function to load form partial into modal
+    function loadForm(url) {
+      document.body.classList.add("blurred");
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error("Failed to load form");
+          return response.text();
+        })
+        .then(html => {
+          content.innerHTML = html;
+          overlay.style.display = "flex";
+
+          // Attach click listener for links inside modal that switch forms
+          const switchToLogin = content.querySelector("#switchToLogin");
+          const switchToSignup = content.querySelector("#switchToSignup");
+          if (switchToLogin) {
+            switchToLogin.addEventListener("click", e => {
+              e.preventDefault();
+              loadForm("/login/");
+            });
+          }
+          if (switchToSignup) {
+            switchToSignup.addEventListener("click", e => {
+              e.preventDefault();
+              loadForm("/signup/");
+            });
+          }
+        })
+        .catch(err => {
+          console.error("Error loading form:", err);
+          alert("Sorry, could not load form at this time.");
+          document.body.classList.remove("blurred");
+        });
+    }
+
+    // Example: open login/signup modals from top nav if you have them
+    const loginBtn = document.getElementById("topLogin");
+    const signupBtn = document.getElementById("topSignup");
+
+    if (loginBtn) {
+      loginBtn.addEventListener("click", e => {
+        e.preventDefault();
+        loadForm("/login/");
+      });
+    }
+    if (signupBtn) {
+      signupBtn.addEventListener("click", e => {
+        e.preventDefault();
+        loadForm("/signup/");
+      });
+    }
+
+    // Close modal when clicking outside modal content
+    overlay.addEventListener("click", e => {
+      if (e.target === overlay) {
+        overlay.style.display = "none";
+        content.innerHTML = "";
+        document.body.classList.remove("blurred");
+      }
+    });
+
+    // Also close modal on pressing Escape key
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && overlay.style.display === "flex") {
+        overlay.style.display = "none";
+        content.innerHTML = "";
+        document.body.classList.remove("blurred");
+      }
+    });
+
+    // Also bind switch link in this standalone signup page
+    document.getElementById("switchToLogin").addEventListener("click", e => {
+      e.preventDefault();
+      loadForm("/login/");
+    });
+  </script>
+</body>
+</html>

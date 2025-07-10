@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Nepal Guide</title>
+  <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="nta-container">
+    
+    <!-- Sidebar -->
+    <aside class="nta-sidebar">
+      <div class="nta-logo">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Nepal Guide</span>
+      </div>
+      <nav>
+        <ul class="nta-nav-list">
+          <li><a href="{% url 'home' %}" class="nta-nav-link"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="{% url 'trip_cost' %}" class="nta-nav-link"><i class="fas fa-calculator"></i> Trip Cost Estimation</a></li>
+          <li><a href="{% url 'destinations' %}" class="nta-nav-link"><i class="fas fa-map-marked-alt"></i> Destination Recommendations</a></li>
+          <li><a href="{% url 'local_pricing' %}" class="nta-nav-link"><i class="fas fa-exclamation-triangle"></i> Local Pricing & Scams</a></li>
+          <li><a href="{% url 'packages' %}" class="nta-nav-link"><i class="fas fa-box-open"></i> Packages & Deals</a></li>
+          <li><a href="{% url 'profile' %}" class="nta-nav-link"><i class="fas fa-user"></i> User Profile</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="nta-main">
+      <header class="nta-topbar">
+        <span class="nta-weather"><i class="fas fa-circle"></i> Live Weather Data</span>
+        <div class="nta-auth-buttons">
+          <a href="{% url 'login_page' %}" id="topLogin" class="nta-btn-login">Login</a>
+          <a  href="{% url 'signup_page' %}" id="topSignup" class="nta-btn-signup">Sign Up</a>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h1 class="hero-title">Welcome to Nepal Travel Assistant</h1>
+        <p class="hero-subtitle">
+          Your intelligent companion for planning the perfect Himalayan adventure.<br>
+          Get personalized cost estimates, weather insights,<br> and destination recommendations.
+        </p>
+        <div class="hero-actions">
+          <a href="{% url 'trip_cost' %}" class="primary-btn"><i class="fas fa-calculator"></i> Estimate Trip Cost</a>
+          <a href="{% url 'destinations' %}" class="outline-btn"><i class="fas fa-map-pin"></i> Find Destinations</a>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="feature-section">
+        <div class="feature-card feature-cost">
+          <h3><i class="fas fa-calculator"></i> Cost Estimation</h3>
+          <p>Get accurate trip cost estimates based on your preferences and duration</p>
+          <a href="{% url 'trip_cost' %}" class="feature-action">Start Planning →</a>
+        </div>
+        <div class="feature-card feature-destination">
+          <h3><i class="fas fa-map-pin"></i> Destination Finder</h3>
+          <p>Discover perfect destinations based on your interests and budget</p>
+          <a href="{% url 'destinations' %}" class="feature-action">Explore Places →</a>
+        </div>
+        <div class="feature-card feature-itinerary">
+          <h3><i class="fa-solid fa-box-open"></i> Packages and Deals</h3>
+          <p>Explore budget-friendly travel packages and exclusive local deals</p>
+          <a href="{% url 'packages' %}" class="feature-action">Packages and Deals →</a>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="why-choose-section">
+        <h2>Why Choose Nepal Travel Assistant?</h2>
+        <p>We combine real-time weather data, local pricing insights, and intelligent recommendations to help you plan the perfect Nepal adventure.</p>
+        <div class="stats">
+          <div><strong>40+</strong><br>Destinations</div>
+          <div><strong>Real-time</strong><br>Weather Data</div>
+          <div><strong>Smart</strong><br>Recommendations</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal Overlay -->
+  <div id="modalOverlay" class="modal-overlay" style="display: none;">
+    <div id="modalContent" class="modal-content"></div>
+  </div>
+
+  <script>
+  const overlay = document.getElementById("modalOverlay");
+  const content = document.getElementById("modalContent");
+
+  function loadForm(file) {
+    document.body.classList.add("blurred");
+
+    fetch(file)
+      .then(response => response.text())
+      .then(html => {
+        content.innerHTML = html;
+        overlay.style.display = "flex";
+      })
+      .catch(err => console.error("Error loading form:", err));
+  }
+document.getElementById("topLogin").addEventListener("click", (e) => {
+  e.preventDefault();
+  loadForm("/login/");
+});
+
+document.getElementById("topSignup").addEventListener("click", (e) => {
+  e.preventDefault();
+  loadForm("/signup/");
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}User Profile - Nepal Guide{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="main-content">
+  <div class="topbar">
+    <div class="header-text">
+      <h1>User Profile</h1>
+      <p>Manage your preferences and view your travel history</p>
+    </div>
+  </div>
+
+  <div class="profile-tabs">
+    <div class="profile-tab active" data-tab="profile">Profile</div>
+    <div class="profile-tab" data-tab="history">Travel History</div>
+    <div class="profile-tab" data-tab="favorites">Favorites</div>
+    <div class="profile-tab" data-tab="settings">Settings</div>
+  </div>
+
+  <!-- Profile -->
+  <div class="profile-section active" id="profile">
+    <h2 class="section-title"><i class="fas fa-user"></i> Personal Information</h2>
+    <p>Name: John Doe</p>
+    <p>Email: john@example.com</p>
+    <p>Member since: January 2023</p>
+  </div>
+
+  <!-- Travel History -->
+  <div class="profile-section" id="history">
+    <h2 class="section-title"><i class="fas fa-passport"></i>Visited Destinations</h2>
+    <div class="destination-tags">
+      <span class="destination-tag">Kathmandu</span>
+      <span class="destination-tag">Pokhara</span>
+      <span class="destination-tag">Chitwan</span>
+      <span class="destination-tag">Lumbini</span>
+      <span class="destination-tag">Nagarkot</span>
+    </div>
+
+    <h2 class="section-title"><i class="fas fa-route"></i>Saved Itineraries</h2>
+    <div class="itinerary-card">
+      <div class="itinerary-header">
+        <div class="itinerary-title">Everest Base Camp Adventure</div>
+        <div class="itinerary-meta">14 days • $1200</div>
+      </div>
+      <div class="itinerary-route">Kathmandu → Lukla → Namche Bazaar → EBC</div>
+    </div>
+    <div class="itinerary-card">
+      <div class="itinerary-header">
+        <div class="itinerary-title">Annapurna Circuit Trek</div>
+        <div class="itinerary-meta">12 days • $800</div>
+      </div>
+      <div class="itinerary-route">Pokhara → Manang → Thorong La → Muktinath</div>
+    </div>
+  </div>
+
+  <!-- Favorites -->
+  <div class="profile-section" id="favorites">
+    <h2 class="section-title"><i class="fas fa-heart"></i>Favorite Destinations</h2>
+    <p>Places you've marked as favorites for future trips</p>
+    <div class="favorites-grid">
+      <div class="favorite-card"><button class="remove-btn">Remove</button><div class="favorite-name">Everest Base Camp</div></div>
+      <div class="favorite-card"><button class="remove-btn">Remove</button><div class="favorite-name">Annapurna Base Camp</div></div>
+      <div class="favorite-card"><button class="remove-btn">Remove</button><div class="favorite-name">Lumbini</div></div>
+      <div class="favorite-card"><button class="remove-btn">Remove</button><div class="favorite-name">Pokhara</div></div>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div class="profile-section" id="settings">
+    <h2 class="section-title"><i class="fas fa-cog"></i>Account Preferences</h2>
+
+    <div class="settings-group">
+      <div class="settings-title">Notification Preferences</div>
+      <div class="setting-item"><input type="checkbox" id="email-notifications" checked><label for="email-notifications">Email notifications</label></div>
+      <div class="setting-item"><input type="checkbox" id="travel-offers" checked><label for="travel-offers">Travel deals and offers</label></div>
+      <div class="setting-item"><input type="checkbox" id="weather-alerts"><label for="weather-alerts">Weather alerts</label></div>
+    </div>
+
+    <div class="settings-group">
+      <div class="settings-title">Privacy Settings</div>
+      <div class="setting-item"><input type="checkbox" id="public-profile"><label for="public-profile">Make profile public</label></div>
+      <div class="setting-item"><input type="checkbox" id="share-itineraries" checked><label for="share-itineraries">Share itineraries with community</label></div>
+    </div>
+
+    <button class="save-btn">Save Settings</button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.profile-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.profile-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.profile-section').forEach(s => s.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
+    });
+  });
+</script>
+{% endblock %}

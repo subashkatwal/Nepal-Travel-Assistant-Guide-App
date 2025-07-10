@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Nepal Guide{% endblock %}</title>
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% block extra_css %}{% endblock %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="nta-container">
+    <!-- Sidebar -->
+    <aside class="nta-sidebar">
+      <div class="nta-logo">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Nepal Guide</span>
+      </div>
+      <nav>
+        <ul class="nta-nav-list">
+          <li><a href="{% url 'home' %}" class="nta-nav-link"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="{% url 'trip_cost' %}" class="nta-nav-link"><i class="fas fa-calculator"></i> Trip Cost Estimation</a></li>
+          <li><a href="{% url 'destinations' %}" class="nta-nav-link"><i class="fas fa-map-marked-alt"></i> Destination Recommendations</a></li>
+          <li><a href="{% url 'local_pricing' %}" class="nta-nav-link"><i class="fas fa-exclamation-triangle"></i> Local Pricing & Scams</a></li>
+          <li><a href="{% url 'packages' %}" class="nta-nav-link"><i class="fas fa-box-open"></i> Packages & Deals</a></li>
+          <li><a href="{% url 'profile' %}" class="nta-nav-link"><i class="fas fa-user"></i> User Profile</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="nta-main">
+      <header class="nta-topbar">
+        <span class="nta-weather"><i class="fas fa-circle"></i> Live Weather Data</span>
+        <div class="nta-auth-buttons">
+          {% comment %} <button id="topSignup" class="nta-btn-logout">Signup</button> {% endcomment %}
+          <button id="topLogout" class="nta-btn-logout">Logout</button>
+        </div>
+      </header>
+
+      {% block content %}
+      {% endblock %}
+    </main>
+  </div>
+
+  <!-- Auth Modal -->
+  <div class="overlay" id="modalOverlay">
+    <div class="auth-container" id="modalContent"></div>
+  </div>
+
+  {% block extra_js %}{% endblock %}
+  <script>
+    const overlay = document.getElementById("modalOverlay");
+    const content = document.getElementById("modalContent");
+
+    function loadForm(file) {
+      document.body.classList.add("blurred");
+      fetch(file)
+        .then(response => response.text())
+        .then(html => {
+          content.innerHTML = html;
+          overlay.style.display = "flex";
+        })
+        .catch(err => console.error("Error loading form:", err));
+    }
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        overlay.style.display = "none";
+        content.innerHTML = "";
+        document.body.classList.remove("blurred");
+      }
+    });
+
+    document.getElementById("topLogin").addEventListener("click", () => loadForm("login.html"));
+    document.getElementById("topSignup").addEventListener("click", () => loadForm("signup.html"));
+  </script>
+</body>
+</html>

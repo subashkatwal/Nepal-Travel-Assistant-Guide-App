@@ -1,8 +1,8 @@
 from rest_framework import status
 from rest_framework.decorators import api_view 
 from rest_framework.response import Response
-from django.contrib.auth.models import User 
-from django.contrib.auth import authenticate,login,logout 
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login,logout
 
 @api_view(['POST'])
 def signup_api(request):
@@ -25,6 +25,7 @@ def signup_api(request):
    user.save()
 
    return Response({'Success':'User created successfully'},status=status.HTTP_201_CREATED)
+
 
 @api_view(['POST'])
 def login_api(request):

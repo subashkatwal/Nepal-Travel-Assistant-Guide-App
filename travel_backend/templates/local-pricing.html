@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Local Pricing & Scams - Nepal Guide{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/local-pricing.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="nta-main">
+  <div class="nta-section">
+    <div class="new-container">
+      <h2 class="nta-section-title">Local Pricing & Scam Alerts</h2>
+      <p class="nta-section-subtitle">Stay informed about fair prices and common tourist scams in Nepal</p>
+    </div>
+
+    <!-- Price Comparisons -->
+    <div class="nta-price-comparison">
+      <h3 class="nta-section-title">Price Comparisons</h3>
+      <p class="nta-section-subtitle">Tourist vs. Local prices for common items and services</p>
+      
+      <table class="nta-price-table">
+        <tr>
+          <td>Taxi (Kathmandu to Bhaktapur)</td>
+          <td class="nta-tourist-price">Tourist: Rs 500</td>
+        </tr>
+        <tr>
+          <td>Transport</td>
+          <td class="nta-local-price">Local:Rs 30 </td>
+        </tr>
+        <tr>
+          <td>Money-saving tips:</td>
+          <td class="nta-markup">100% markup</td>
+        </tr>
+      </table>
+
+      <ul class="nta-tips-list">
+        <li>Use ride-sharing apps</li>
+        <li>Negotiate before starting</li>
+        <li>Ask locals for fair price</li>
+      </ul>
+    </div>
+
+    <!-- Scam Alerts -->
+    <h3 class="nta-section-title">Scam Alerts</h3>
+    <p class="nta-section-subtitle">Common scams targeting tourists and how to avoid them</p>
+
+    <!-- Fake Gemstone Scam -->
+    <div class="nta-scam-alert">
+      <h4 class="nta-scam-title">Fake Gemstone Scam</h4>
+      <p class="nta-scam-desc">Sellers claim gemstones are valuable and offer to ship them internationally for profit</p>
+
+      <div class="nta-prevention-tips">
+        <div class="nta-prevention-title">Prevention tips:</div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="nta-tip-text">Avoid expensive gemstones from street vendors</div>
+        </div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="nta-tip-text">Don't trust 'export business' offers</div>
+        </div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="nta-tip-text">Research prices before purchasing</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Taxi Meter Manipulation -->
+    <div class="nta-scam-alert">
+      <h4 class="nta-scam-title">Taxi Meter Manipulation</h4>
+      <p class="nta-scam-desc">Drivers claim broken meters or quote fixed high prices</p>
+
+      <div class="nta-prevention-tips">
+        <div class="nta-prevention-title">Prevention tips:</div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="nta-tip-text">Insist on using the meter</div>
+        </div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="nta-tip-text">Know approximate distances and costs</div>
+        </div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="nta-tip-text">Use ride-sharing apps when available</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fake Charity Donations -->
+    <div class="nta-scam-alert">
+      <h4 class="nta-scam-title">Fake Charity Donations</h4>
+      <p class="nta-scam-desc">People approach tourists asking for donations to fake orphanages or schools</p>
+
+      <div class="nta-prevention-tips">
+        <div class="nta-prevention-title">Prevention tips:</div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="nta-tip-text">Research legitimate charities beforehand</div>
+        </div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="nta-tip-text">Don't give money to unsolicited requests</div>
+        </div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="nta-tip-text">Visit organizations directly if interested</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- General Safety Tips -->
+    <div class="nta-safety-tips">
+      <h4 class="nta-scam-title">General Safety Tips</h4>
+
+      <div class="nta-prevention-tips">
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-shield"></i></div>
+          <div class="nta-tip-text">Always research prices beforehand and negotiate when appropriate</div>
+        </div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-shield"></i></div>
+          <div class="nta-tip-text">Trust your instincts - if something feels too good to be true, it probably is</div>
+        </div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-shield"></i></div>
+          <div class="nta-tip-text">Connect with local guides through reputable agencies</div>
+        </div>
+        <div class="nta-tip-item">
+          <div class="nta-tip-checkbox"><i class="fa-solid fa-shield"></i></div>
+          <div class="nta-tip-text">Keep copies of important documents and emergency contacts</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

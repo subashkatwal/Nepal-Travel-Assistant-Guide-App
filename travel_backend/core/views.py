@@ -1,13 +1,59 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from .models import Destination
-from .serializers import DestinationSerializer
+def home(request):
+    return render(request,'base.html')
 
-@api_view(['GET'])
-def destination_list(request):
-    destinations = Destination.objects.all()
-    serializer = DestinationSerializer(destinations, many=True)
-    return Response(serializer.data)
+
+
+def homepage(request):
+    return render(request, 'homepage.html')
+
+
+
+
+@login_required
+def trip_cost(request):
+    return render(request, 'trip_cost.html')
+
+
+@login_required
+def destination(request):
+    return render(request, 'destinations.html')
+
+
+
+@login_required
+def local_pricing(request):
+    return render(request, 'local-pricing.html')
+
+
+
+@login_required
+def packages(request):
+    return render(request, 'packages.html')
+
+
+
+@login_required
+def profile(request):
+    return render(request, 'profile.html')
+
+
+def login(request):
+    return render(request, 'login.html')
+
+def signup(request):
+    return render(request,'signup.html')
+
+def logout(request):
+    return render(request,'home.html')
+
+
+
+def login_modal(request):
+    return render(request, 'partials/login_form.html')
+
+def signup_modal(request):
+    return render(request, 'partials/signup_form.html')
+
