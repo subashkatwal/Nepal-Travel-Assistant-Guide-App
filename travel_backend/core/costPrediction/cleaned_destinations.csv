@@ -1,0 +1,303 @@
+place_name,description,category,city,estimated_cost,popular_activities,best_season,duration_days
+Destination 1,Lakeside city known for Phewa Lake and as a gateway to the Annapurna Circuit.,Nature,Pokhara,3500,"Boating, Paragliding, Hiking",September to November,3
+Destination 2,"Historic square with palaces, courtyards and temples from the Malla period.",Cultural,Kathmandu,1500,"Sightseeing, Photography",October to December,1
+Destination 3,UNESCO World Heritage Site and one of the holiest Hindu temples.,Religious,Kathmandu,1000,"Pilgrimage, Cultural Visit",February to April,1
+Destination 4,"Jungle safari destination known for rhinos, tigers, and birdwatching.",Wildlife,Chitwan,4000,"Jungle Safari, Elephant Ride, Canoeing",October to March,2
+Destination 5,Birthplace of Lord Buddha and UNESCO World Heritage Site.,Religious,Lumbini,2000,"Pilgrimage, Monastery Tour",October to December,2
+Destination 6,Beautiful wildlife spot located in Pokhara. Known for photography.,Wildlife,Pokhara,2187,Photography,March to May,2
+Destination 7,Beautiful nature spot located in Pokhara. Known for paragliding.,Nature,Pokhara,1166,Paragliding,March to May,2
+Destination 8,Beautiful nature spot located in Namche Bazaar. Known for trekking.,Nature,Namche Bazaar,4922,Trekking,September to November,2
+Destination 9,Beautiful wildlife spot located in Jomsom. Known for sightseeing.,Wildlife,Jomsom,2538,Sightseeing,October to December,2
+Destination 10,Beautiful wildlife spot located in Dhulikhel. Known for hiking.,Wildlife,Dhulikhel,1581,Hiking,September to November,2
+Destination 11,Beautiful cultural spot located in Bhaktapur. Known for sightseeing.,Cultural,Bhaktapur,4840,Sightseeing,October to December,1
+Destination 12,Beautiful wildlife spot located in Tansen. Known for rafting.,Wildlife,Tansen,1339,Rafting,September to November,1
+Destination 13,Beautiful wildlife spot located in Kathmandu. Known for temple visit.,Wildlife,Kathmandu,2205,Temple Visit,September to November,4
+Destination 14,Beautiful nature spot located in Dhulikhel. Known for rafting.,Nature,Dhulikhel,3216,Rafting,March to May,1
+Destination 15,Beautiful adventure spot located in Gorkha. Known for paragliding.,Adventure,Gorkha,2602,Paragliding,October to December,2
+Destination 16,Beautiful adventure spot located in Bandipur. Known for sightseeing.,Adventure,Bandipur,2311,Sightseeing,October to December,1
+Destination 17,Beautiful religious spot located in Namche Bazaar. Known for photography.,Religious,Namche Bazaar,3621,Photography,October to December,4
+Destination 18,Beautiful cultural spot located in Dhulikhel. Known for sightseeing.,Cultural,Dhulikhel,4264,Sightseeing,October to December,1
+Destination 19,Beautiful nature spot located in Namche Bazaar. Known for temple visit.,Nature,Namche Bazaar,2155,Temple Visit,September to November,2
+Destination 20,Beautiful wildlife spot located in Bhaktapur. Known for sightseeing.,Wildlife,Bhaktapur,1053,Sightseeing,September to November,3
+Destination 21,Beautiful religious spot located in Jomsom. Known for hiking.,Religious,Jomsom,1134,Hiking,March to May,1
+Destination 22,Beautiful cultural spot located in Tansen. Known for photography.,Cultural,Tansen,2055,Photography,September to November,1
+Destination 23,Beautiful cultural spot located in Bandipur. Known for trekking.,Cultural,Bandipur,1052,Trekking,September to November,2
+Destination 24,Beautiful nature spot located in Bhaktapur. Known for photography.,Nature,Bhaktapur,2543,Photography,March to May,1
+Destination 25,Beautiful religious spot located in Jomsom. Known for temple visit.,Religious,Jomsom,2670,Temple Visit,March to May,1
+Destination 26,Beautiful wildlife spot located in Jomsom. Known for paragliding.,Wildlife,Jomsom,4395,Paragliding,September to November,3
+Destination 27,Beautiful nature spot located in Gorkha. Known for photography.,Nature,Gorkha,4045,Photography,September to November,1
+Destination 28,Beautiful religious spot located in Pokhara. Known for hiking.,Religious,Pokhara,1554,Hiking,September to November,4
+Destination 29,Beautiful adventure spot located in Kathmandu. Known for sightseeing.,Adventure,Kathmandu,1448,Sightseeing,September to November,2
+Destination 30,Beautiful adventure spot located in Dhulikhel. Known for rafting.,Adventure,Dhulikhel,4289,Rafting,September to November,2
+Destination 31,Beautiful adventure spot located in Namche Bazaar. Known for temple visit.,Adventure,Namche Bazaar,3952,Temple Visit,October to December,3
+Destination 32,Beautiful wildlife spot located in Tansen. Known for paragliding.,Wildlife,Tansen,3496,Paragliding,October to December,3
+Destination 33,Beautiful wildlife spot located in Kathmandu. Known for temple visit.,Wildlife,Kathmandu,4987,Temple Visit,March to May,4
+Destination 34,Beautiful nature spot located in Bhaktapur. Known for temple visit.,Nature,Bhaktapur,2475,Temple Visit,March to May,2
+Destination 35,Beautiful cultural spot located in Bhaktapur. Known for trekking.,Cultural,Bhaktapur,2310,Trekking,September to November,3
+Destination 36,Beautiful cultural spot located in Jomsom. Known for temple visit.,Cultural,Jomsom,3072,Temple Visit,October to December,3
+Destination 37,Beautiful religious spot located in Namche Bazaar. Known for sightseeing.,Religious,Namche Bazaar,2537,Sightseeing,March to May,2
+Destination 38,Beautiful cultural spot located in Bhaktapur. Known for trekking.,Cultural,Bhaktapur,2544,Trekking,October to December,4
+Destination 39,Beautiful religious spot located in Lalitpur. Known for trekking.,Religious,Lalitpur,2863,Trekking,September to November,3
+Destination 40,Beautiful nature spot located in Tansen. Known for rafting.,Nature,Tansen,4628,Rafting,October to December,4
+Destination 41,Beautiful religious spot located in Bhaktapur. Known for hiking.,Religious,Bhaktapur,3593,Hiking,October to December,3
+Destination 42,Beautiful cultural spot located in Pokhara. Known for hiking.,Cultural,Pokhara,2641,Hiking,October to December,1
+Destination 43,Beautiful adventure spot located in Bandipur. Known for photography.,Adventure,Bandipur,4495,Photography,March to May,2
+Destination 44,Beautiful nature spot located in Namche Bazaar. Known for photography.,Nature,Namche Bazaar,4868,Photography,October to December,2
+Destination 45,Beautiful cultural spot located in Tansen. Known for temple visit.,Cultural,Tansen,2519,Temple Visit,October to December,4
+Destination 46,Beautiful adventure spot located in Jomsom. Known for trekking.,Adventure,Jomsom,3693,Trekking,September to November,4
+Destination 47,Beautiful wildlife spot located in Tansen. Known for hiking.,Wildlife,Tansen,1869,Hiking,March to May,1
+Destination 48,Beautiful wildlife spot located in Tansen. Known for photography.,Wildlife,Tansen,3082,Photography,October to December,1
+Destination 49,Beautiful cultural spot located in Pokhara. Known for rafting.,Cultural,Pokhara,3241,Rafting,October to December,4
+Destination 50,Beautiful religious spot located in Namche Bazaar. Known for rafting.,Religious,Namche Bazaar,2841,Rafting,October to December,3
+Destination 50,Beautiful religious spot located in Namche Bazaar. Known for rafting.,Religious,Namche Bazaar,2841,Rafting,October to December,3
+Destination 51,"A wildlife experience in the scenic area of Tansen, famous for temple visit.",Wildlife,Tansen,4247,Temple Visit,October to December,2
+Destination 52,"A nature experience in the scenic area of Bandipur, famous for paragliding.",Nature,Bandipur,4740,Paragliding,September to November,4
+Destination 53,"A cultural experience in the scenic area of Lalitpur, famous for photography.",Cultural,Lalitpur,4938,Photography,October to December,1
+Destination 54,"A wildlife experience in the scenic area of Dhulikhel, famous for hiking.",Wildlife,Dhulikhel,5037,Hiking,October to December,3
+Destination 55,"A nature experience in the scenic area of Bhaktapur, famous for photography.",Nature,Bhaktapur,2793,Photography,October to December,1
+Destination 56,"A nature experience in the scenic area of Kathmandu, famous for sightseeing.",Nature,Kathmandu,2022,Sightseeing,October to December,1
+Destination 57,"A wildlife experience in the scenic area of Gorkha, famous for sightseeing.",Wildlife,Gorkha,3372,Sightseeing,October to December,3
+Destination 58,"A religious experience in the scenic area of Jomsom, famous for temple visit.",Religious,Jomsom,3238,Temple Visit,October to December,2
+Destination 59,"A religious experience in the scenic area of Dhulikhel, famous for temple visit.",Religious,Dhulikhel,2851,Temple Visit,September to November,2
+Destination 60,"A nature experience in the scenic area of Tansen, famous for temple visit.",Nature,Tansen,2214,Temple Visit,September to November,2
+Destination 61,"A wildlife experience in the scenic area of Namche Bazaar, famous for rafting.",Wildlife,Namche Bazaar,2243,Rafting,April to June,4
+Destination 62,"A wildlife experience in the scenic area of Gorkha, famous for trekking.",Wildlife,Gorkha,1247,Trekking,September to November,2
+Destination 63,"A cultural experience in the scenic area of Namche Bazaar, famous for photography.",Cultural,Namche Bazaar,1599,Photography,April to June,1
+Destination 64,"A religious experience in the scenic area of Kathmandu, famous for temple visit.",Religious,Kathmandu,4228,Temple Visit,October to December,1
+Destination 65,"A cultural experience in the scenic area of Bandipur, famous for sightseeing.",Cultural,Bandipur,1903,Sightseeing,October to December,2
+Destination 66,"A cultural experience in the scenic area of Pokhara, famous for sightseeing.",Cultural,Pokhara,3504,Sightseeing,September to November,1
+Destination 67,"A nature experience in the scenic area of Tansen, famous for hiking.",Nature,Tansen,5287,Hiking,September to November,3
+Destination 68,"A nature experience in the scenic area of Bandipur, famous for hiking.",Nature,Bandipur,4422,Hiking,September to November,2
+Destination 69,"A adventure experience in the scenic area of Bandipur, famous for rafting.",Adventure,Bandipur,4753,Rafting,October to December,3
+Destination 70,"A religious experience in the scenic area of Bhaktapur, famous for paragliding.",Religious,Bhaktapur,1928,Paragliding,October to December,4
+Destination 71,"A adventure experience in the scenic area of Lalitpur, famous for sightseeing.",Adventure,Lalitpur,4774,Sightseeing,September to November,1
+Destination 72,"A nature experience in the scenic area of Dhulikhel, famous for temple visit.",Nature,Dhulikhel,2026,Temple Visit,October to December,3
+Destination 73,"A religious experience in the scenic area of Kathmandu, famous for sightseeing.",Religious,Kathmandu,1258,Sightseeing,September to November,2
+Destination 74,"A wildlife experience in the scenic area of Tansen, famous for hiking.",Wildlife,Tansen,3238,Hiking,April to June,3
+Destination 75,"A cultural experience in the scenic area of Bandipur, famous for sightseeing.",Cultural,Bandipur,3260,Sightseeing,April to June,3
+Destination 76,"A nature experience in the scenic area of Tansen, famous for photography.",Nature,Tansen,2960,Photography,October to December,4
+Destination 77,"A cultural experience in the scenic area of Gorkha, famous for sightseeing.",Cultural,Gorkha,4834,Sightseeing,April to June,4
+Destination 78,"A adventure experience in the scenic area of Dhulikhel, famous for temple visit.",Adventure,Dhulikhel,5033,Temple Visit,April to June,4
+Destination 79,"A wildlife experience in the scenic area of Bandipur, famous for sightseeing.",Wildlife,Bandipur,4111,Sightseeing,April to June,4
+Destination 80,"A religious experience in the scenic area of Jomsom, famous for photography.",Religious,Jomsom,4356,Photography,September to November,4
+Destination 81,"A cultural experience in the scenic area of Kathmandu, famous for photography.",Cultural,Kathmandu,2776,Photography,October to December,1
+Destination 82,"A cultural experience in the scenic area of Bhaktapur, famous for trekking.",Cultural,Bhaktapur,3195,Trekking,September to November,4
+Destination 83,"A cultural experience in the scenic area of Kathmandu, famous for temple visit.",Cultural,Kathmandu,1891,Temple Visit,April to June,2
+Destination 84,"A religious experience in the scenic area of Gorkha, famous for paragliding.",Religious,Gorkha,3819,Paragliding,April to June,4
+Destination 85,"A religious experience in the scenic area of Bhaktapur, famous for photography.",Religious,Bhaktapur,2469,Photography,April to June,1
+Destination 86,"A nature experience in the scenic area of Namche Bazaar, famous for rafting.",Nature,Namche Bazaar,4069,Rafting,October to December,1
+Destination 87,"A religious experience in the scenic area of Bandipur, famous for paragliding.",Religious,Bandipur,3004,Paragliding,April to June,2
+Destination 88,"A adventure experience in the scenic area of Dhulikhel, famous for temple visit.",Adventure,Dhulikhel,2227,Temple Visit,April to June,4
+Destination 89,"A wildlife experience in the scenic area of Pokhara, famous for trekking.",Wildlife,Pokhara,1465,Trekking,October to December,4
+Destination 90,"A religious experience in the scenic area of Namche Bazaar, famous for hiking.",Religious,Namche Bazaar,4317,Hiking,October to December,2
+Destination 91,"A adventure experience in the scenic area of Namche Bazaar, famous for temple visit.",Adventure,Namche Bazaar,4112,Temple Visit,April to June,3
+Destination 92,"A nature experience in the scenic area of Pokhara, famous for hiking.",Nature,Pokhara,4166,Hiking,October to December,3
+Destination 93,"A adventure experience in the scenic area of Jomsom, famous for trekking.",Adventure,Jomsom,4121,Trekking,October to December,3
+Destination 94,"A wildlife experience in the scenic area of Bandipur, famous for photography.",Wildlife,Bandipur,3440,Photography,October to December,1
+Destination 95,"A adventure experience in the scenic area of Kathmandu, famous for photography.",Adventure,Kathmandu,1838,Photography,September to November,2
+Destination 96,"A cultural experience in the scenic area of Pokhara, famous for rafting.",Cultural,Pokhara,4116,Rafting,October to December,2
+Destination 97,"A wildlife experience in the scenic area of Bhaktapur, famous for photography.",Wildlife,Bhaktapur,4982,Photography,April to June,3
+Destination 98,"A religious experience in the scenic area of Bhaktapur, famous for temple visit.",Religious,Bhaktapur,1214,Temple Visit,April to June,4
+Destination 99,"A nature experience in the scenic area of Dhulikhel, famous for temple visit.",Nature,Dhulikhel,5344,Temple Visit,September to November,3
+Destination 100,"A cultural experience in the scenic area of Namche Bazaar, famous for paragliding.",Cultural,Namche Bazaar,2395,Paragliding,April to June,2
+Destination 100,"Serene hilltop town known for panoramic sunrise views.",Nature,Pokhara,3000,"Hiking, Photography",March to May,3
+Destination 101,"Historic city famous for centuries-old temples and festivals.",Cultural,Bhaktapur,1800,"Sightseeing, Festivals",October to December,2
+Destination 102,"Remote village with traditional Tibetan culture and monasteries.",Cultural,Muktinath,2500,"Pilgrimage, Cultural Tours",May to October,4
+Destination 103,"Popular trekking destination along the Annapurna Circuit.",Adventure,Annapurna Base Camp,5500,"Trekking, Camping",September to November,10
+Destination 104,"Sacred Hindu temple complex beside the Bagmati River.",Religious,Kathmandu,1200,"Pilgrimage, Cultural Visit",February to April,1
+Destination 105,"National park rich in biodiversity including Bengal tigers.",Wildlife,Chitwan,4500,"Safari, Wildlife Watching",October to March,3
+Destination 106,"Peaceful lakeside spot ideal for boating and nature walks.",Nature,Phewa Lake,3200,"Boating, Birdwatching",September to November,2
+Destination 107,"UNESCO heritage site and birthplace of Buddha.",Religious,Lumbini,2000,"Pilgrimage, Meditation",October to December,2
+Destination 108,"Hill station offering scenic trekking routes and waterfalls.",Nature,Dhulikhel,1900,"Hiking, Sightseeing",March to May,2
+Destination 109,"Vibrant market town known for local crafts and festivals.",Cultural,Janakpur,1600,"Shopping, Festivals",November to February,1
+Destination 110,"Mountain town gateway to Mustang region with stunning landscapes.",Nature,Jomsom,4000,"Trekking, Photography",March to May,5
+Destination 111,"Ancient palace complex with rich history and architecture.",Cultural,Kathmandu Durbar Square,1500,"Sightseeing, Photography",October to December,1
+Destination 112,"Thrilling white-water rafting spot on the Trishuli River.",Adventure,Trishuli,2700,"Rafting, Camping",September to November,2
+Destination 113,"Village famous for traditional Tharu culture and homestays.",Cultural,Tharu Village,2200,"Cultural Tours, Wildlife",October to March,2
+Destination 114,"Hilltop temple offering panoramic views of Kathmandu valley.",Religious,Swayambhunath,1300,"Pilgrimage, Sightseeing",February to April,1
+Destination 115,"Picturesque valley known for its apple orchards and trekking.",Nature,Palpa,2800,"Trekking, Photography",March to May,3
+Destination 116,"National park with rhinos, elephants and jungle safaris.",Wildlife,Parsa,4300,"Safari, Wildlife Watching",November to February,3
+Destination 117,"Remote trekking village famous for ancient monasteries.",Cultural,Dolpo,6000,"Trekking, Cultural Tours",May to October,12
+Destination 118,"Hill station famous for its medicinal herbs and hikes.",Nature,Tansen,2000,"Hiking, Sightseeing",March to May,2
+Destination 119,"Sacred Buddhist site with ancient stupas and monasteries.",Religious,Boudhanath,1400,"Pilgrimage, Cultural Tours",October to December,1
+Destination 120,"Adventure hub for paragliding over scenic hills and lakes.",Adventure,Pokhara,3500,"Paragliding, Boating",September to November,3
+Destination 121,"Mountain village known for unique Tibetan culture and trekking.",Cultural,Upper Mustang,5500,"Trekking, Cultural Tours",March to May,10
+Destination 122,"Lush forest reserve home to rare bird species and rhinos.",Wildlife,Bardiya,4200,"Safari, Birdwatching",October to March,3
+Destination 123,"Hilltop fortress town with panoramic views of the Himalayas.",Cultural,Bandipur,2300,"Sightseeing, Photography",September to November,2
+Destination 124,"Scenic valley with hot springs and trekking trails.",Nature,Manang,3700,"Trekking, Hot Springs",May to October,5
+Destination 125,"Historic temple complex with elaborate carvings and statues.",Religious,Pashupatinath,1300,"Pilgrimage, Cultural Visit",February to April,1
+Destination 126,"Popular trekking route featuring rhododendron forests.",Adventure,Langtang,4800,"Trekking, Wildlife Watching",March to May,8
+Destination 127,"Cultural town known for traditional Newari art and festivals.",Cultural,Patan,1700,"Sightseeing, Festivals",October to December,1
+Destination 128,"National park with dense forests and endangered species.",Wildlife,Shuklaphanta,4000,"Safari, Birdwatching",November to February,3
+Destination 129,"Hill station with waterfalls and panoramic mountain views.",Nature,Banepa,2100,"Hiking, Sightseeing",March to May,2
+Destination 130,"Remote monastery with spectacular mountain backdrop.",Religious,Thyangboche,3200,"Pilgrimage, Trekking",April to June,4
+Destination 131,"Adventure sports hub for canyoning and river rafting.",Adventure,Sunkoshi,2800,"Rafting, Canyoning",September to November,3
+Destination 132,"Ancient city with preserved medieval temples and streets.",Cultural,Bhaktapur,1600,"Sightseeing, Photography",October to December,2
+Destination 133,"Nature reserve famous for migratory birds and wetlands.",Wildlife,Phulchoki,1900,"Birdwatching, Hiking",February to April,2
+Destination 134,"Hill town known for scenic treks and apple orchards.",Nature,Palpa,2500,"Trekking, Sightseeing",March to May,3
+Destination 135,"Buddhist pilgrimage site with vibrant festivals.",Religious,Muktinath,2700,"Pilgrimage, Cultural Tours",May to October,3
+Destination 136,"Popular spot for mountain biking and hiking trails.",Adventure,Chisapani,2100,"Mountain Biking, Hiking",September to November,3
+Destination 137,"Heritage town with traditional crafts and markets.",Cultural,Kirtipur,1500,"Shopping, Sightseeing",October to December,1
+Destination 138,"Wildlife sanctuary known for elephants and rhinos.",Wildlife,Chitwan,4200,"Safari, Wildlife Watching",October to March,3
+Destination 139,"Lakeside town with boating and paragliding activities.",Nature,Pokhara,3500,"Boating, Paragliding",September to November,3
+Destination 140,"Remote trekking village with ancient monasteries and caves.",Cultural,Dolpo,6000,"Trekking, Cultural Tours",May to October,12
+Destination 141,"Hill station famous for medicinal herbs and hot springs.",Nature,Tansen,2000,"Hiking, Hot Springs",March to May,2
+Destination 142,"Sacred temple complex with rich Hindu rituals.",Religious,Pashupatinath,1300,"Pilgrimage, Cultural Visit",February to April,1
+Destination 143,"Adventure destination for paragliding and mountain biking.",Adventure,Pokhara,3700,"Paragliding, Mountain Biking",September to November,3
+Destination 144,"Historical city with palaces, temples and museums.",Cultural,Kathmandu,1500,"Sightseeing, Museums",October to December,1
+Destination 145,"National park with rich flora and fauna, including tigers.",Wildlife,Chitwan,4500,"Safari, Wildlife Photography",October to March,3
+Destination 146,"Mountain village gateway to Annapurna trekking routes.",Nature,Jomsom,4000,"Trekking, Photography",March to May,5
+Destination 147,"Hill station with waterfalls and forest trails.",Nature,Dhulikhel,1900,"Hiking, Sightseeing",March to May,2
+Destination 148,"Buddhist monastery with spectacular Himalayan views.",Religious,Thyangboche,3200,"Pilgrimage, Trekking",April to June,4
+Destination 149,"River rafting hotspot with scenic mountainous surroundings.",Adventure,Trishuli,2700,"Rafting, Camping",September to November,2
+Destination 150,"Peaceful town with rich Newari culture and ancient temples.",Cultural,Kirtipur,1700,"Sightseeing, Cultural Tours",October to December,2
+Destination 151,"Scenic mountain valley with alpine meadows and lakes.",Nature,Gosaikunda,3800,"Trekking, Camping",May to October,5
+Destination 152,"Adventure hotspot for ziplining and canyoning.",Adventure,Bungamati,2900,"Ziplining, Canyoning",September to November,2
+Destination 153,"Ancient Buddhist monastery perched on a cliff.",Religious,Namo Buddha,2800,"Pilgrimage, Hiking",March to May,3
+Destination 154,"Wildlife reserve home to rare bird species and rhinos.",Wildlife,Bardiya,4200,"Safari, Birdwatching",October to March,3
+Destination 155,"Hill station famous for organic farms and homestays.",Nature,Ilām,2200,"Hiking, Farm Visits",March to May,3
+Destination 156,"Village known for traditional wood carvings and temples.",Cultural,Dhulikhel,1800,"Sightseeing, Cultural Tours",October to December,2
+Destination 157,"Mountain village gateway to the Manaslu trekking route.",Adventure,Arughat,4600,"Trekking, Cultural Tours",March to May,7
+Destination 158,"Sacred Hindu temple with vibrant festivals and rituals.",Religious,Janakpur,1500,"Pilgrimage, Festivals",November to February,1
+Destination 159,"National park with diverse flora and fauna including elephants.",Wildlife,Shuklaphanta,4100,"Safari, Wildlife Watching",November to February,3
+Destination 160,"Popular hill station with tea gardens and hiking trails.",Nature,Panauti,2300,"Hiking, Sightseeing",March to May,2
+Destination 161,"Ancient town with traditional Newari architecture and festivals.",Cultural,Bhaktapur,1700,"Festivals, Sightseeing",October to December,2
+Destination 162,"Remote monastery known for its unique architecture.",Religious,Pharping,2600,"Pilgrimage, Trekking",February to April,3
+Destination 163,"Adventure destination with mountain biking and rock climbing.",Adventure,Chisapani,2400,"Mountain Biking, Rock Climbing",September to November,3
+Destination 164,"Wildlife sanctuary known for its elephant population.",Wildlife,Chitwan,4200,"Safari, Wildlife Watching",October to March,3
+Destination 165,"Hill station with panoramic views and trekking routes.",Nature,Banepa,2100,"Hiking, Sightseeing",March to May,2
+Destination 166,"Buddhist pilgrimage site with serene meditation centers.",Religious,Lumbini,2000,"Pilgrimage, Meditation",October to December,2
+Destination 167,"Ancient palace and museum complex showcasing Nepalese history.",Cultural,Kathmandu,1600,"Museums, Sightseeing",October to December,1
+Destination 168,"Popular spot for white-water rafting and camping.",Adventure,Sunkoshi,2800,"Rafting, Camping",September to November,3
+Destination 169,"Village famous for traditional Tharu culture and wildlife.",Cultural,Tharu Village,2300,"Cultural Tours, Wildlife",October to March,2
+Destination 170,"Hilltop temple with views over Kathmandu valley.",Religious,Swayambhunath,1300,"Pilgrimage, Sightseeing",February to April,1
+Destination 171,"Mountain valley known for apple orchards and scenic treks.",Nature,Palpa,2800,"Trekking, Photography",March to May,3
+Destination 172,"National park with rhinos, elephants and jungle safaris.",Wildlife,Parsa,4300,"Safari, Wildlife Watching",November to February,3
+Destination 173,"Remote trekking village with ancient monasteries.",Cultural,Dolpo,6000,"Trekking, Cultural Tours",May to October,12
+Destination 174,"Hill station famous for medicinal herbs and hikes.",Nature,Tansen,2000,"Hiking, Sightseeing",March to May,2
+Destination 175,"Sacred Buddhist site with ancient stupas and monasteries.",Religious,Boudhanath,1400,"Pilgrimage, Cultural Tours",October to December,1
+Destination 176,"Adventure hub for paragliding over scenic hills and lakes.",Adventure,Pokhara,3500,"Paragliding, Boating",September to November,3
+Destination 177,"Mountain village known for unique Tibetan culture and trekking.",Cultural,Upper Mustang,5500,"Trekking, Cultural Tours",March to May,10
+Destination 178,"Lush forest reserve home to rare bird species and rhinos.",Wildlife,Bardiya,4200,"Safari, Birdwatching",October to March,3
+Destination 179,"Hilltop fortress town with panoramic views of the Himalayas.",Cultural,Bandipur,2300,"Sightseeing, Photography",September to November,2
+Destination 180,"Scenic valley with hot springs and trekking trails.",Nature,Manang,3700,"Trekking, Hot Springs",May to October,5
+Destination 181,"Historic temple complex with elaborate carvings and statues.",Religious,Pashupatinath,1300,"Pilgrimage, Cultural Visit",February to April,1
+Destination 182,"Popular trekking route featuring rhododendron forests.",Adventure,Langtang,4800,"Trekking, Wildlife Watching",March to May,8
+Destination 183,"Cultural town known for traditional Newari art and festivals.",Cultural,Patan,1700,"Sightseeing, Festivals",October to December,1
+Destination 184,"National park with dense forests and endangered species.",Wildlife,Shuklaphanta,4000,"Safari, Birdwatching",November to February,3
+Destination 185,"Hill station with waterfalls and panoramic mountain views.",Nature,Banepa,2100,"Hiking, Sightseeing",March to May,2
+Destination 186,"Remote monastery with spectacular mountain backdrop.",Religious,Thyangboche,3200,"Pilgrimage, Trekking",April to June,4
+Destination 187,"Adventure sports hub for canyoning and river rafting.",Adventure,Sunkoshi,2800,"Rafting, Canyoning",September to November,3
+Destination 188,"Ancient city with preserved medieval temples and streets.",Cultural,Bhaktapur,1600,"Sightseeing, Photography",October to December,2
+Destination 189,"Nature reserve famous for migratory birds and wetlands.",Wildlife,Phulchoki,1900,"Birdwatching, Hiking",February to April,2
+Destination 190,"Hill town known for scenic treks and apple orchards.",Nature,Palpa,2500,"Trekking, Sightseeing",March to May,3
+Destination 191,"Buddhist pilgrimage site with vibrant festivals.",Religious,Muktinath,2700,"Pilgrimage, Cultural Tours",May to October,3
+Destination 192,"Popular spot for mountain biking and hiking trails.",Adventure,Chisapani,2100,"Mountain Biking, Hiking",September to November,3
+Destination 193,"Heritage town with traditional crafts and markets.",Cultural,Kirtipur,1500,"Shopping, Sightseeing",October to December,1
+Destination 194,"Wildlife sanctuary known for elephants and rhinos.",Wildlife,Chitwan,4200,"Safari, Wildlife Watching",October to March,3
+Destination 195,"Lakeside town with boating and paragliding activities.",Nature,Pokhara,3500,"Boating, Paragliding",September to November,3
+Destination 196,"Remote trekking village with ancient monasteries and caves.",Cultural,Dolpo,6000,"Trekking, Cultural Tours",May to October,12
+Destination 197,"Hill station famous for medicinal herbs and hot springs.",Nature,Tansen,2000,"Hiking, Hot Springs",March to May,2
+Destination 198,"Sacred temple complex with rich Hindu rituals.",Religious,Pashupatinath,1300,"Pilgrimage, Cultural Visit",February to April,1
+Destination 199,"Adventure destination for paragliding and mountain biking.",Adventure,Pokhara,3700,"Paragliding, Mountain Biking",September to November,3
+Destination 200,"Historical city with palaces, temples and museums.",Cultural,Kathmandu,1500,"Sightseeing, Museums",October to December,1
+Destination 200,"Historical city with palaces, temples and museums.",Cultural,Kathmandu,1500,"Sightseeing, Museums",October to December,1
+Destination 201,"Scenic ridge with panoramic Himalayan views.",Nature,Langtang,2600,"Trekking, Photography",March to May,5
+Destination 202,"Charming village known for bamboo craft workshops.",Cultural,Ilām,1600,"Craft Tours, Sightseeing",September to November,2
+Destination 203,"Remote alpine lake surrounded by rhododendron forest.",Nature,Gosainkunda,4400,"Trekking, Nature Walks",June to September,4
+Destination 204,"High-altitude plateau with unique flora and fauna.",Wildlife,Manaslu,4800,"Trekking, Wildlife Watching",September to October,10
+Destination 205,"Traditional Newari village with stone architecture.",Cultural,Bhaktapur,1400,"Sightseeing, Shopping",October to December,1
+Destination 206,"River gorge ideal for white-water rafting.",Adventure,Trishuli River,600,"Rafting, Camping",October to April,2
+Destination 207,"Scenic tea gardens with walking trails.",Nature,Hile,1800,"Walking, Tea Tours",February to April,2
+Destination 208,"Sacred pilgrim site with panoramic valley views.",Religious,Muktinath,3800,"Pilgrimage, Trekking",April to November,3
+Destination 209,"Rustic lakeside campsite with boating access.",Nature,Rara Lake,2990,"Camping, Boating",May to September,5
+Destination 210,"Hilly town famous for apple orchards and views.",Nature,Mana,2500,"Fruit Picking, Hiking",August to October,2
+Destination 211,"Remote glacier valley with adventure trekking.",Adventure,Upper Mustang,3900,"Trekking, Cultural Tours",March to May,12
+Destination 212,"Small town with medieval fort ruins.",Cultural,Kailali Fort,300,"Sightseeing, History",November to February,1
+Destination 213,"Forest reserve with diverse bird watching.",Wildlife,Chandragiri,2550,"Birding, Hiking",October to December,2
+Destination 214,"Scenic canyon with easy hiking paths.",Adventure,Dolakha Canyon,2200,"Hiking, Photography",March to June,3
+Destination 215,"Mountain hamlet known for traditional wool weaving.",Cultural,Marpha,2670,"Craft Tours, Sightseeing",September to November,2
+Destination 216,"Hot spring resort beside a mountain river.",Nature,Ghunsa Hot Springs,3500,"Hot Springs, Hiking",May to July,4
+Destination 217,"Terraced hillside town with millet terraces.",Cultural,Sikles,1800,"Trekking, Cultural Visit",March to June,3
+Destination 218,"Plateau site famous for fossil-bearing rock formations.",Nature,Siwalik Hills,700,"Geology Tours, Nature Walks",October to March,2
+Destination 219,"Sacred cave with annual pilgrimage festival.",Religious,Barahkshetra,80,"Pilgrimage, Festivals",March to April,1
+Destination 220,"Scenic riverside padlocked bridge and park area.",Nature,Panauti,1500,"Sightseeing, Picnicking",October to December,1
+Destination 221,"Highland pasture used for yak grazing and trekking.",Adventure,Gauri Shankar,4800,"Trekking, Wildlife",June to September,6
+Destination 222,"Ancient trade center on historic salt route.",Cultural,Jomsom,2700,"Sightseeing, Cultural Tours",September to November,3
+Destination 223,"Wetland habitat for migratory birds.",Wildlife,Koshi Tappu,75,"Bird Watching, Nature Tours",October to March,2
+Destination 224,"Hilltop temple complex with festival traditions.",Religious,Palanchok Bhagwati,1500,"Pilgrimage, Cultural Visit",March to May,1
+Destination 225,"Valley trail with rhino spotting options.",Wildlife,Bardia,300,"Safari, Wildlife",October to March,4
+Destination 226,"Scenic mountain pass with overnight camping.",Adventure,Thorong La Pass,5416,"Trekking, Camping",May to November,10
+Destination 227,"Traditional settlement with Himalayan medicinal herb farms.",Nature,Aba,2200,"Herb Tours, Hiking",April to June,3
+Destination 228,"Hill station with Tibetan Buddhist monasteries.",Cultural,Sherpa Village,3500,"Cultural Tours, Sightseeing",April to June,5
+Destination 229,"River valley popular for kayaking and photo ops.",Adventure,Seti River,1200,"Kayaking, Photography",September to December,2
+Destination 230,"Rich pond ecosystem with freshwater birdlife.",Wildlife,Pokhara Lakeside,850,"Boating, Birding",October to February,1
+Destination 231,"Remote mountain hamlet with age-old tea production.",Cultural,Taplejung,2500,"Tea Tours, Culture",May to September,5
+Destination 232,"High-altitude grassland with yak caravans.",Nature,Manang Plains,3500,"Trekking, Culture",April to October,7
+Destination 233,"Sacred monument perched on a mountain ridge.",Religious,Changu Narayan,1800,"Pilgrimage, Sightseeing",February to April,1
+Destination 234,"Historic village ruins from medieval era.",Cultural,Kirateshwar,800,"History, Trekking",October to December,2
+Destination 235,"Foggy hilltop with panoramic sunrise views.",Nature,Phalebas,2200,"Hiking, Sunrise Tours",January to April,2
+Destination 236,"Wild plateau inhabited by wild goats.",Wildlife,Shey Phoksundo,3100,"Trekking, Wildlife",June to September,8
+Destination 237,"Hillside monastery village with meditation retreats.",Spiritual,Pharping,1500,"Meditation, Cultural Tours",March to June,2
+Destination 238,"Mountain biking trail network with rugged terrain.",Adventure,Harisiddhi Trails,1600,"Mountain Biking, Hiking",September to November,3
+Destination 239,"Remote valley with scenic waterfalls.",Nature,Bhimtang,3750,"Trekking, Waterfall Viewing",June to September,5
+Destination 240,"Lakeside viewpoint accessible by cable car.",Nature,Sarangkot Viewpoint,1600,"Sightseeing, Boating",September to November,2
+Destination 241,"Heritage town with mudbrick architecture.",Cultural,Gorkha Durbar,1400,"Sightseeing, History",October to December,1
+Destination 242,"Protected forest area rich in orchids.",Nature,Sundarijal,1500,"Hiking, Botany",February to May,2
+Destination 243,"Sacred mountain summit trek to Buddhist stupa.",Religious,Swarga Dwari,4000,"Pilgrimage, Trekking",April to November,6
+Destination 244,"Plateau region with prehistoric cave paintings.",Cultural,Khaptad,3300,"Cultural Tours, Hiking",March to June,7
+Destination 245,"Riverside camp with fishing and rafting.",Adventure,Marshyangdi River,900,"Rafting, Fishing",November to February,3
+Destination 246,"Iconic hill with Shiva temple on summit.",Religious,Nagarkot Hill,2175,"Pilgrimage, Sunset Views",February to April,1
+Destination 247,"Forest corridor home to wild elephants.",Wildlife,Shuklaphanta,200,"Safari, Wildlife",October to March,4
+Destination 248,"Herbal valley known for aromatic plant farms.",Nature,Barpak,1900,"Herb Tours, Hiking",April to July,3
+Destination 249,"Historical palace now a museum spot.",Cultural,Hanuman Dhoka,1400,"Sightseeing, Museums",September to December,1
+Destination 250,"Remote mountain lake with fluttering prayer flags.",Nature,Hundhar Lake,3950,"Trekking, Camping",May to September,5
+Destination 251,"Adventure hub for canyoning and zip-lining.",Adventure,Lele Gorge,1300,"Canyoning, Zipline",October to March,2
+Destination 252,"Sacred hot spring pilgrimage site.",Religious,Tendong Hot Springs,2900,"Pilgrimage, Hot Springs",April to June,2
+Destination 253,"Ancient stupa perched on hilltop ridge.",Cultural,Swayambhunath,1400,"Sightseeing, Pilgrimage",October to December,1
+Destination 254,"Highland meadow with seasonal wildflower blooms.",Nature,Fishtail Meadow,3400,"Trekking, Photography",May to July,4
+Destination 255,"Wild corridor for tiger and deer sightings.",Wildlife,Pilibhit,310,"Safari, Wildlife Watching",November to February,3
+Destination 256,"Remote canyon with adventure via jeep track.",Adventure,Dhorpatan Valley,3600,"Jeep Safari, Trekking",May to September,5
+Destination 257,"Himalayan pasture with yak cheese production tours.",Cultural,Cheese Village,3200,"Cultural Tours, Food Tasting",June to September,3
+Destination 258,"Hilltop pagan shrine with ritual dances.",Religious,Janai Purnima Shrine,2570,"Pilgrimage, Festivals",August to September,1
+Destination 259,"Scenic tea-humoung hill forest habitat.",Nature,Damak Hills,1800,"Hiking, Bird Watching",October to February,2
+Destination 260,"Remote glacier lake at mountain foot.",Nature,Lho La Lake,4250,"Trekking, Nature",May to September,7
+Destination 261,"Adventure trail with mountain biking routes.",Adventure,Balthali Trails,1650,"Mountain Biking, Hiking",October to December,3
+Destination 262,"Ancient merchant town on river valley.",Cultural,Dhulikhel,1550,"Sightseeing, Cultural Tours",October to December,1
+Destination 263,"Wildlife sanctuary famous for Bengal tigers.",Wildlife,Shivapuri Nagarjun,2210,"Hiking, Wildlife",October to March,2
+Destination 264,"Sacred monastery perched on cliffside.",Religious,Chele La,3800,"Pilgrimage, Trekking",April to June,3
+Destination 265,"Heritage bazaar with traditional pashmina workshops.",Cultural,Lalitpur,1400,"Shopping, Craft Tours",October to December,1
+Destination 266,"Remote hot spring beside glacial stream.",Nature,Tatopani,1190,"Hot Springs, Hiking",February to April,2
+Destination 267,"Historic battlefield site memorial.",Cultural,Khajura Battle Site,250,"History, Sightseeing",March to May,1
+Destination 268,"Hill station with panoramic mountain views.",Nature,Nuwakot,2070,"Sightseeing, Hiking",October to January,2
+Destination 269,"Forested mountain ridge with canopy walkway.",Adventure,Bhagawati Trail,1800,"Hiking, Canopy Walk",September to November,2
+Destination 270,"Wildlife corridor home to leopards.",Wildlife,Pokhara Foothills,950,"Hiking, Wildlife Watching",October to February,2
+Destination 271,"Remote alpine pasture with shepherd culture.",Cultural,Khunde,3800,"Trekking, Cultural Visit",April to June,5
+Destination 272,"Riverside heritage settlement with stone carvings.",Cultural,Chitlang,1700,"Sightseeing, History",September to November,1
+Destination 273,"Mountain community with organic farming experiences.",Nature,Pyuthan,1000,"Farm Tours, Hiking",April to June,2
+Destination 274,"Adventure rafting on high-gradient river section.",Adventure,Sun Koshi River,300,"Rafting, Camping",November to March,4
+Destination 275,"Sacred viewpoint overlooking four Himalayan peaks.",Religious,Gauri Shankar Viewpoint,4500,"Pilgrimage, Trekking",May to October,6
+Destination 276,"Wetland reserve with abundant crocodile populations.",Wildlife,Beeshazar Lake,1100,"Boating, Wildlife Watching",October to February,2
+Destination 277,"Historic hill fortress with scenic trails.",Cultural,Takele fort,1900,"Sightseeing, Hiking",November to February,1
+Destination 278,"Rural homestay village with folk music nights.",Cultural,Majhkot,1200,"Culture, Homestay",October to December,2
+Destination 279,"Remote valley with rice terraces and waterfall.",Nature,Bhote Koshi Valley,2200,"Trekking, Waterfalls",June to September,3
+Destination 280,"Adventure canyon trek with ropes and ladders.",Adventure,Kaligandaki Gorge,950,"Trekking, Adventure",March to June,4
+Destination 281,"Sacred ritual site with stone memorials.",Religious,Nagdev Thaan,1550,"Pilgrimage, Cultural Visit",April to July,1
+Destination 282,"Forest park with butterfly conservancy.",Nature,Chisapani Butterflies,2200,"Hiking, Wildlife",March to May,2
+Destination 283,"Wild plateau with snow leopard sightings.",Wildlife,Laya Plateau,4300,"Trekking, Wildlife Watching",June to September,9
+Destination 284,"Historic monastery village with frescoes.",Cultural,Sinja Village,1300,"Sightseeing, Cultural Tours",May to October,2
+Destination 285,"Winding mountain trail for technical biking.",Adventure,Chandeni Trails,2000,"Mountain Biking, Hiking",September to November,3
+Destination 286,"Sacred lakeside shrine with boating festival.",Religious,Dhanushadham,1100,"Pilgrimage, Festival",March to April,1
+Destination 287,"Ancient stone temple in forest setting.",Cultural,Taklung Monastery,2500,"Sightseeing, Cultural Visit",September to November,2
+Destination 288,"Remote mountain junction with yak markets.",Nature,Yak Bazaar,3600,"Markets, Trekking",April to June,4
+Destination 289,"Forest slope with medicinal plant research center.",Nature,Palpa Herb Centre,2000,"Botany Tours, Hiking",February to May,3
+Destination 290,"Highland pass used by ancient traders.",Adventure,Khumbu La Pass,5000,"Trekking, History",March to May,8
+Destination 291,"Hilltop village known for folk dance festivals.",Cultural,Khokana,1350,"Cultural Festivals, Sightseeing",March to May,1
+Destination 292,"Riverside campsite under thick sal forest.",Nature,Valley Camp,850,"Camping, Bird Watching",October to February,2
+Destination 293,"Wildlife preserve with sloth bear sightings.",Wildlife,Chitlang Reserve,1600,"Hiking, Wildlife",November to March,3
+Destination 294,"Ancient stupa ruin on remote hill.",Historical,Singha Durbar Ruins,2100,"History, Trekking",September to November,2
+Destination 295,"Adventure rock-climbing crag near riverside.",Adventure,Syangja Crag,1000,"Climbing, Hiking",October to March,3
+Destination 296,"Sacred forest with holy grove traditions.",Religious,Raniban,1300,"Pilgrimage, Nature Walks",March to May,1
+Destination 297,"Scenic tea terrace landscape viewpoint.",Nature,Phaplu Tea Gardens,2550,"Sightseeing, Tea Tours",February to May,2
+Destination 298,"Heritage palace atop forested hill.",Cultural,Kuthiala Palace,1400,"Sightseeing, History",October to December,1
+Destination 299,"Wild river canyon with cliffside trails.",Adventure,Karrah Valley,1750,"Trekking, Adventure",April to June,4

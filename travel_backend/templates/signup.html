@@ -145,6 +145,7 @@
         {% csrf_token %}
         <div class="form-group-row">
           <div class="form-group">
+          
             <label for="id_first_name">First Name</label>
             <input type="text" name="first_name" id="id_first_name" placeholder="John" required />
           </div>
@@ -180,7 +181,7 @@
 
         <div class="form-footer">
           Already have an account? 
-          <a id="switchToLogin">Login here</a>
+          <a href="{% url 'login' %}" id="switchToLogin">Login here</a>
           <div class="copyright" style="margin-top: 10px; font-size: 12px; color: #95a5a6;">
             2025 Nepal Guide All rights reserved.
           </div>
@@ -195,84 +196,14 @@
   </div>
 
   <script>
-    const overlay = document.getElementById("modalOverlay");
-    const content = document.getElementById("modalContent");
-
-    // Function to load form partial into modal
-    function loadForm(url) {
-      document.body.classList.add("blurred");
-      fetch(url)
-        .then(response => {
-          if (!response.ok) throw new Error("Failed to load form");
-          return response.text();
-        })
-        .then(html => {
-          content.innerHTML = html;
-          overlay.style.display = "flex";
-
-          // Attach click listener for links inside modal that switch forms
-          const switchToLogin = content.querySelector("#switchToLogin");
-          const switchToSignup = content.querySelector("#switchToSignup");
-          if (switchToLogin) {
-            switchToLogin.addEventListener("click", e => {
-              e.preventDefault();
-              loadForm("/login/");
-            });
-          }
-          if (switchToSignup) {
-            switchToSignup.addEventListener("click", e => {
-              e.preventDefault();
-              loadForm("/signup/");
-            });
-          }
-        })
-        .catch(err => {
-          console.error("Error loading form:", err);
-          alert("Sorry, could not load form at this time.");
-          document.body.classList.remove("blurred");
-        });
+  function checkAgreement() {
+    const checkbox = document.getElementById('agreement');
+    if (!checkbox.checked) {
+      alert('You must agree to the terms and conditions to sign up.');
+      return false; 
     }
-
-    // Example: open login/signup modals from top nav if you have them
-    const loginBtn = document.getElementById("topLogin");
-    const signupBtn = document.getElementById("topSignup");
-
-    if (loginBtn) {
-      loginBtn.addEventListener("click", e => {
-        e.preventDefault();
-        loadForm("/login/");
-      });
-    }
-    if (signupBtn) {
-      signupBtn.addEventListener("click", e => {
-        e.preventDefault();
-        loadForm("/signup/");
-      });
-    }
-
-    // Close modal when clicking outside modal content
-    overlay.addEventListener("click", e => {
-      if (e.target === overlay) {
-        overlay.style.display = "none";
-        content.innerHTML = "";
-        document.body.classList.remove("blurred");
-      }
-    });
-
-    // Also close modal on pressing Escape key
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape" && overlay.style.display === "flex") {
-        overlay.style.display = "none";
-        content.innerHTML = "";
-        document.body.classList.remove("blurred");
-      }
-    });
-
-    // Also bind switch link in this standalone signup page
-    document.getElementById("switchToLogin").addEventListener("click", e => {
-      e.preventDefault();
-      loadForm("/login/");
-    });
-  </script>
+    return true;
+  }
+</script>
 </body>
 </html>

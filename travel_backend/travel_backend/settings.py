@@ -138,10 +138,14 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = [
+# CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOWED_ORIGINS = [
     
-    "http://localhost:8001",
-    "http://127.0.0.1:8001",  # frontend address
-]
+#     "http://localhost:8001",
+#     "http://127.0.0.1:8001",  # frontend address
+# ]
 
+AUTHENTICATION_BACKENDS = [
+    'core.auth_backend.EmailBackend', 
+    'django.contrib.auth.backends.ModelBackend',  
+]
