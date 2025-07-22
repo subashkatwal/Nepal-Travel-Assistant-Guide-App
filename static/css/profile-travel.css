@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6fcfb;
+  color: #2c3e50;
+}
+
+.nta-container {
+  display: flex;
+}
+
+/* Sidebar */
+.nta-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 2rem 1rem;
+  height: 100vh;
+}
+
+.nta-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.nta-logo i {
+  font-size: 2rem;
+  color: #fbbf24;
+}
+
+.nta-logo span {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nta-logo small {
+  font-size: 0.9rem;
+  display: block;
+}
+
+.nta-nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nta-nav-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid transparent;
+  transition: all 0.3s;
+}
+
+.nta-nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-left-color: #fbbf24;
+}
+
+.nta-nav-link.active {
+  background: rgba(255, 255, 255, 0.15);
+  border-left-color: #fbbf24;
+}
+
+.nta-nav-link i {
+  margin-right: 10px;
+}
+
+/* Top Bar */
+.nta-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.live-weather i {
+  font-size: 10px;
+  color: green;
+  margin-right: 5px;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nta-login-btn {
+  background-color: transparent;
+  border: 1px solid #007a88;
+  color: #007a88;
+}
+
+.nta-signup-btn {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Profile Section */
+.nta-main-content {
+  flex-grow: 1;
+  background: linear-gradient(to bottom right, #eafff7, #fefeea);
+}
+
+.nta-profile-section {
+  padding: 2rem;
+}
+
+.nta-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.nta-subtitle {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.nta-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nta-tab {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nta-tab.active {
+  background: #00b3a4;
+  color: white;
+  border-color: #00b3a4;
+}
+
+.nta-tab-contents .nta-tab-pane {
+  display: none;
+}
+
+.nta-tab-pane.active {
+  display: block;
+}
+
+/* Cards */
+.nta-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.nta-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nta-card-body input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.nta-btn-edit {
+  background: #00b3a4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nta-destinations-grid {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nta-destination-card {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.nta-destination-card:hover {
+  border-color: #10b981;
+  transform: translateY(-3px);
+}
+
+.nta-itinerary-list .nta-itinerary-item {
+  background: white;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.nta-itinerary-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nta-tags span {
+  background: #e0f7f4;
+  padding: 4px 10px;
+  margin: 4px;
+  border-radius: 20px;
+  display: inline-block;
+}

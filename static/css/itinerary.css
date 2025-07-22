@@ -1,0 +1,268 @@
+/* 
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f6fcfb;
+            color: #2c3e50;
+        }
+
+        .nta-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+       
+        .nta-sidebar {
+            width: 240px;
+            background: linear-gradient(135deg, #d9f2ef, #f0f8f5);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .nta-logo {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #005f6b;
+        }
+
+        .nta-logo i {
+            margin-right: 8px;
+        }
+
+        .nta-nav-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nta-nav-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            color: #005f6b;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .nta-nav-link:hover {
+            color: #00b3a4;
+            transform: translateX(5px);
+        }
+
+        .nta-nav-link i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        
+        .nta-main {
+            flex-grow: 1;
+            padding: 30px;
+            background: linear-gradient(to bottom right, #eafff7, #fefeea);
+        }
+
+        .nta-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .nta-header-text h1 {
+            color: #005f6b;
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .nta-header-text p {
+            color: #007a88;
+            font-size: 1rem;
+        }
+
+        .nta-weather {
+            display: flex;
+            align-items: center;
+            color: #007a88;
+            font-size: 14px;
+        }
+
+        .nta-weather i {
+            color: #00b3a4;
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
+       
+        .nta-section-title {
+            font-size: 1.8rem;
+            color: #005f6b;
+            margin-bottom: 10px;
+        }
+
+        .nta-section-subtitle {
+            color: #007a88;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .nta-itinerary-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .nta-duration-badge {
+            display: inline-block;
+            background-color: #e0f7f5;
+            color: #007a88;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .nta-itinerary-scroll {
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .nta-day-card {
+            border: 1px solid #e0f7f5;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .nta-day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #d1e7e5;
+        }
+
+        .nta-day-title {
+            font-weight: 700;
+            color: #005f6b;
+            font-size: 1.2rem;
+        }
+
+        .nta-day-cost {
+            background-color: #e0f7f5;
+            color: #007a88;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .nta-activity-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .nta-activity-table th {
+            text-align: left;
+            padding: 10px 15px;
+            background-color: #e0f7f5;
+            color: #005f6b;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .nta-activity-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0f7f5;
+            font-size: 0.9rem;
+        }
+
+        .nta-activity-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .nta-activity-name {
+            font-weight: 600;
+            color: #005f6b;
+        }
+
+        .nta-activity-duration {
+            color: #007a88;
+        }
+
+        .nta-activity-cost {
+            font-weight: 600;
+            color: #00b3a4;
+        }
+
+        .nta-legend {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e0f7f5;
+            font-size: 0.9rem;
+            color: #007a88;
+        }
+
+        .nta-legend strong {
+            color: #005f6b;
+        }
+
+        .nta-action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .nta-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nta-btn-primary {
+            background-color: #00b3a4;
+            color: white;
+        }
+
+        .nta-btn-primary:hover {
+            background-color: #00897b;
+        }
+
+        .nta-btn-secondary {
+            background-color: #e0f7f5;
+            color: #007a88;
+            border: 1px solid #b2dfdb;
+        }
+
+        .nta-btn-secondary:hover {
+            background-color: #b2dfdb;
+        }
+
+     
+        .nta-itinerary-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .nta-itinerary-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .nta-itinerary-scroll::-webkit-scrollbar-thumb {
+            background: #b2dfdb;
+            border-radius: 10px;
+        }
+
+        .nta-itinerary-scroll::-webkit-scrollbar-thumb:hover {
+            background: #80cbc4;
+        }
+      */

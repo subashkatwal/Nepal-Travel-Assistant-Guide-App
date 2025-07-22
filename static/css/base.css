@@ -1,0 +1,101 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6fcfb;
+  color: #2c3e50;
+}
+
+.nta-container {
+  display: flex;
+}
+
+.nta-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, #d9f2ef, #f0f8f5);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.nta-logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.nta-logo i {
+  margin-right: 8px;
+}
+
+.nta-nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nta-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #005f6b;
+  text-decoration: none;
+}
+
+.nta-nav-link i {
+  margin-right: 10px;
+}
+
+.nta-main {
+  flex-grow: 1;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #eafff7, #fefeea);
+}
+
+.nta-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.nta-weather i {
+  color: green;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.nta-auth-buttons button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007a88;
+  color: white;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.auth-container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* blur effect when modal is open */
+/* .blurred {
+  filter: blur(2px);
+  pointer-events: none;
+} */

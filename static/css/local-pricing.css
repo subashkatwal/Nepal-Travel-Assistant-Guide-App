@@ -1,0 +1,276 @@
+/* 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6fcfb;
+  color: #2c3e50;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6fcfb;
+  color: #2c3e50;
+}
+
+.nta-container {
+  display: flex;
+}
+
+.nta-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, #d9f2ef, #f0f8f5);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.nta-logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.nta-logo i {
+  margin-right: 8px;
+}
+
+.nta-nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nta-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #005f6b;
+  text-decoration: none;
+}
+
+.nta-nav-link i {
+  margin-right: 10px;
+}
+
+.nta-main {
+  flex-grow: 1;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #eafff7, #fefeea);
+}
+
+.nta-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.nta-weather i {
+  color: green;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.nta-auth-buttons button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007a88;
+  color: white;
+  cursor: pointer;
+}
+
+.nta-btn-signup {
+  background-color: #ffc107;
+  color: black;
+}
+ */
+
+
+
+ /* Content Sections */
+        .nta-section {
+            margin-bottom: 40px;
+        }
+
+        .nta-section-title {
+            font-size: 1.8rem;
+            color: #000000;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0f7f5;
+        }
+
+        .nta-section-subtitle {
+            color: #007a88;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        /* Price Comparison Tables */
+        .nta-price-comparison {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .nta-price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .nta-price-table th {
+            text-align: left;
+            padding: 12px 15px;
+            background-color: #e0f7f5;
+            color: #005f6b;
+            font-weight: 600;
+        }
+
+        .nta-price-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0f7f5;
+        }
+
+        .nta-price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .nta-tourist-price {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+
+        .nta-local-price {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        .nta-markup {
+            color: #e67e22;
+            font-weight: 600;
+        }
+
+        .nta-tips-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nta-tips-list li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .nta-tips-list li:before {
+            content: "\2714";
+            font-family: "Font Awesome 6 Free";
+            position: absolute;
+            left: 0;
+            color: #000000;
+        }
+
+        /* Scam Alerts */
+        .nta-scam-alert {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .nta-scam-title {
+            font-size: 1.3rem;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        .nta-scam-desc {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .nta-prevention-tips {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .nta-prevention-title {
+            font-weight: 600;
+            color: #005f6b;
+            margin-bottom: 10px;
+        }
+
+        .nta-tip-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .nta-tip-checkbox {
+            margin-right: 10px;
+            color: #00b3a4;
+        }
+
+        .nta-tip-text {
+            flex: 1;
+        }
+
+        /* Safety Tips */
+        .nta-safety-tips {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+        }
+
+        /* Weather Section */
+        .nta-weather-section {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .nta-weather-title {
+            font-size: 1.3rem;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        .nta-weather-location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #007a88;
+        }
+
+        .nta-weather-location i {
+            margin-right: 10px;
+            color: #030303;
+        }
+
+        .nta-risk-level {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .nta-risk-medium {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+ 
+.new-container{
+    text-align: center;
+}

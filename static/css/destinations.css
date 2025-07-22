@@ -1,0 +1,215 @@
+
+/* Main Content */
+.nta-main {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+/* Header and Subtitle */
+h1 {
+  text-align: center;
+  color: #1a3c40;
+  font-size: 32px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Filter Section */
+.filter-section {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+  
+}
+
+.filter-section h2 {
+  margin-bottom: 3px;
+  font-size: 22px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all children horizontally */
+  gap: 20px;
+}
+
+
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center interest checkboxes */
+  gap: 30px;
+}
+
+.interests label {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.budget {
+  display: flex;
+  gap: 65px;
+  justify-content: center; /* Center budget inputs */
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+.budget label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.budget input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.apply-btn {
+  padding: 10px 450px;
+  background-color: #0f1f2d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.new-container {
+  text-align: center;
+}
+
+/* Destination Cards */
+.cards-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.tags {
+  font-size: 13px;
+  margin: 8px 0;
+  color: #666;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.meta i {
+  margin-right: 5px;
+}
+
+.price {
+  font-weight: bold;
+  color: #1a3c40;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating {
+  font-size: 15px;
+  color: #f39c12;
+}
+
+.bottom button {
+  background-color: #0f1f2d;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bottom button i {
+  margin-right: 6px;
+}
+
+/* Optional: Top bar styling if needed */
+.nta-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.nta-weather i {
+  color: green;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.nta-auth-buttons button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007a88;
+  color: white;
+  cursor: pointer;
+}
+
+.nta-btn-logout {
+  background-color: #ffc107;
+  color: black;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}

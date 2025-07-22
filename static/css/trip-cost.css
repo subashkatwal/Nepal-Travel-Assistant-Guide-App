@@ -1,0 +1,321 @@
+/* Inherit theme styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6fcfb;
+  color: #2c3e50;
+}
+
+/* nav bar */
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6fcfb;
+  color: #2c3e50;
+}
+
+.nta-container {
+  display: flex;
+}
+
+.nta-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, #d9f2ef, #f0f8f5);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.nta-logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.nta-logo i {
+  margin-right: 8px;
+}
+
+.nta-nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nta-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #005f6b;
+  text-decoration: none;
+}
+
+.nta-nav-link i {
+  margin-right: 10px;
+}
+
+.nta-main {
+  flex-grow: 1;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #eafff7, #fefeea);
+}
+
+.nta-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.nta-weather i {
+  color: green;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.nta-auth-buttons button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007a88;
+  color: white;
+  cursor: pointer;
+}
+
+.nta-btn-logout {
+  background-color: #ffc107;
+  color: black;
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: linear-gradient(135deg, #d9f2ef, #f0f8f5);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.logo i {
+  margin-right: 8px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #005f6b;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #007a88;
+}
+
+.nav-link i {
+  margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #eafff7, #fefeea);
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.live-weather i {
+  color: green;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007a88;
+  color: white;
+  cursor: pointer;
+}
+
+.signup-btn {
+  background-color: #ffc107;
+  color: black;
+}
+
+
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #eafff7, #fefeea);
+}
+
+.trip-estimation-section h2 {
+  font-size: 24px;
+  color: #007a88;
+  margin-bottom: 5px;
+}
+
+.subheading {
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.estimation-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.trip-form-card {
+  flex: 1;
+  max-width: 460px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.trip-form-card h3 {
+  color: #007a88;
+  margin-bottom: 10px;
+}
+
+.form-desc {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 8px;
+  appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  background: #d3e8e4;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #007a88;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555;
+  margin-top: 5px;
+}
+
+select {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.estimate-btn {
+  margin-top: 25px;
+  background: linear-gradient(to right, #00b3a4, #ffc107);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.estimate-btn:hover {
+  opacity: 0.9;
+}
+
+/* Output Card */
+.trip-output-card {
+  flex: 1;
+  max-width: 400px;
+  background: white;
+  padding: 35px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #00b3a4, #ffc107);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+}
+
+.icon-circle i {
+  color: white;
+  font-size: 24px;
+}
+
+.trip-output-card h3 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.trip-output-card p {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+.trip-estimation-section h1{
+  justify-content: center;
+  align-items: center;
+}
