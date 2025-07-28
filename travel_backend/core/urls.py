@@ -16,10 +16,12 @@ urlpatterns = [
     path('signup-form/', views.signup_form, name='signup_form'),
 
      path('trip_cost/', views.trip_cost, name='trip_cost'),
-    path('destinations/', views.destination, name='destinations'),
+    path("recommendations/", views.destination, name="destinations"),
     path('local-pricing/', views.local_pricing, name='local_pricing'),
     path('packages/', views.packages, name='packages'),
+    path("permit/", views.permit, name="permit"),
     path('profile/', views.profile, name='profile'),
+    # path('success/', views.success_page, name='success_page'),
   
    
 ]

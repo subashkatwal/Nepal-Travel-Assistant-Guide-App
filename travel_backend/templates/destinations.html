@@ -12,85 +12,63 @@
   <h1>Travel Packages and Deals</h1>
   <p class="subtitle">Explore curated travel packages tailored to your preferences and budget</p>
 
+
   <section class="filter-section">
     <div class="new-container">
       <h2>Filter Destinations</h2>
       <p>Customize your search based on interests and budget</p>
     </div>
     <br>
-    <div class="filters">
-      <div class="interests">
-        <label><input type="checkbox"> Adventure</label>
-        <label><input type="checkbox"> Religious</label>
-        <label><input type="checkbox"> Cultural</label>
-        <label><input type="checkbox"> Wildlife</label>
-        <label><input type="checkbox"> Nature</label>
-        <label><input type="checkbox"> Relaxation</label>
-      </div>
 
-      <div class="budget">
-        <div>
-          <label>Minimum Budget (NPR)</label>
-          <input type="number" placeholder="0">
+    <form method="GET" action="{% url 'destinations' %}">
+      <div class="filters">
+        <div class="interests">
+          <label><input type="radio" name="category" value="Adventure" required> Adventure</label>
+          <label><input type="radio" name="category" value="Religious"> Religious</label>
+          <label><input type="radio" name="category" value="Cultural"> Cultural</label>
+          <label><input type="radio" name="category" value="Wildlife"> Wildlife</label>
+          <label><input type="radio" name="category" value="Nature"> Nature</label>
+          <label><input type="radio" name="category" value="Relaxation"> Relaxation</label>
         </div>
-        <div>
-          <label>Maximum Budget (NPR)</label>
-          <input type="number" placeholder="200000">
-        </div>
-      </div>
 
-      <button class="apply-btn">Apply Filters</button>
-    </div>
+        <div class="budget">
+          <div>
+            <label>Minimum Budget (NPR)</label>
+            <input type="number" name="min_budget" placeholder="0" required>
+          </div>
+          <div>
+            <label>Maximum Budget (NPR)</label>
+            <input type="number" name="max_budget" placeholder="200000" required>
+          </div>
+        </div>
+
+        <button type="submit" class="apply-btn">Apply Filters</button>
+      </div>
+    </form>
   </section>
 
+
   <section class="cards-section">
-    <div class="card">
-      <img src="{% static 'images/everest.webp' %}" alt="Everest Base Camp">
-      <div class="card-content">
-        <h3>Everest Base Camp</h3>
-        <div class="tags">Trekking · Photography · Culture</div>
-        <div class="meta">
-          <span><i class="fa-regular fa-clock"></i> 12–16 days</span>
-          <span class="price">NPR 160,000</span>
+    {% if recommendations %}
+      {% for place in recommendations %}
+        <div class="card">
+          <img src="{% static 'images/default.avif' %}" alt="{{ place.city }}">
+          <div class="card-content">
+            <h3>{{ place.city }}</h3>
+            <div class="tags">{{ place.category }}</div>
+            <div class="meta">
+              <span><i class="fa-regular fa-clock"></i> Flexible Stay</span>
+              <span class="price">NPR {{ place.estimated_cost }}</span>
+            </div>
+            <div class="bottom">
+              <button><i class="fa-solid fa-location-dot"></i> Add to Itinerary</button>
+            </div>
+          </div>
         </div>
-        <div class="bottom">
-          <span class="rating">⭐ 4.8</span>
-          <button><i class="fa-solid fa-location-dot"></i> Add to Itinerary</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static 'images/pokhara.webp' %}" alt="Pokhara">
-      <div class="card-content">
-        <h3>Pokhara</h3>
-        <div class="tags">Boating · Paragliding · Hiking</div>
-        <div class="meta">
-          <span><i class="fa-regular fa-clock"></i> 3–5 days</span>
-          <span class="price">NPR 52,000</span>
-        </div>
-        <div class="bottom">
-          <span class="rating">⭐ 4.6</span>
-          <button><i class="fa-solid fa-location-dot"></i> Add to Itinerary</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static 'images/chitwan.webp' %}" alt="Chitwan Safari">
-      <div class="card-content">
-        <h3>Chitwan Safari</h3>
-        <div class="tags">Wildlife Safari · Elephant Rides · Jungle Walk</div>
-        <div class="meta">
-          <span><i class="fa-regular fa-clock"></i> 2–3 days</span>
-          <span class="price">NPR 39,000</span>
-        </div>
-        <div class="bottom">
-          <span class="rating">⭐ 4.5</span>
-          <button><i class="fa-solid fa-location-dot"></i> Add to Itinerary</button>
-        </div>
-      </div>
-    </div>
+      {% endfor %}
+    {% else %}
+      <p>No recommendations yet. Please apply filters above 👆</p>
+    {% endif %}
   </section>
 </div>
 

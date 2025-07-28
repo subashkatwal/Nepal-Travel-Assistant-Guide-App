@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Permit Application | Nepal Guide{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/permit.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="permit-container">
+  <div class="permit-header">
+    <h1>Your Adventure Awaits! 🏔️</h1>
+    <p>We're here to make your permit process as smooth as the mountain breeze. 
+       Just a few details and you'll be one step closer to your Nepal adventure!</p>
+  </div>
+
+  <div class="permit-features">
+    <div class="permit-feature">🔒 Secure & Protected</div>
+    <div class="permit-feature">📄 Official Processing</div>
+    <div class="permit-feature">💬 24/7 Support</div>
+  </div>
+
+  <div class="permit-form">
+    <h2>Let's Get You Ready for Nepal! ✨</h2>
+    <p>We only need a few details to process your permit. Your information is safe with us.</p>
+
+    <!-- Form Start -->
+   <form method="POST">
+  {% csrf_token %}
+  
+  <!-- Section 1 -->
+  <div class="form-section">
+    <h3>👋 Tell us about yourself</h3>
+    <div class="form-group">
+      <label>Your Beautiful Name *</label>
+      <input type="text" name="full_name" placeholder="As shown on your passport" required>
+    </div>
+    <div class="form-group">
+      <label>Passport Number *</label>
+      <input type="text" name="passport_number" placeholder="We'll keep it secure" required>
+    </div>
+    <div class="form-group">
+      <label>Email Address *</label>
+      <input type="email" name="email" placeholder="For permit updates & travel tips" required>
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" name="phone_number" placeholder="In case we need to reach you">
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="form-section">
+    <h3>🎒 Your amazing adventure</h3>
+    <div class="form-group">
+      <label>Where are you headed? *</label>
+      <select name="destination" required>
+        <option value="">Choose your destination</option>
+        <option value="Everest Base Camp">Everest Base Camp</option>
+        <option value="Annapurna Circuit">Annapurna Circuit</option>
+        <option value="Langtang Valley">Langtang Valley</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Trip Duration *</label>
+      <select name="trip_duration" required>
+        <option value="">How long will you stay?</option>
+        <option value="1 week">1 week</option>
+        <option value="2 weeks">2 weeks</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Planned Travel Dates</label>
+      <input type="text" name="travel_dates" placeholder="e.g., March 15 - March 25, 2024">
+      <p class="form-note">Don't worry if dates change - we can update your permit!</p>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="form-section">
+    <h3>💖 Anything else we should know?</h3>
+    <div class="form-group">
+      <label>Special requests or questions</label>
+      <textarea name="special_requests" placeholder="Dietary requirements, accessibility needs, or just say hi!"></textarea>
+    </div>
+  </div>
+
+  <button type="submit" class="submit-btn">🚀 Submit My Application</button>
+</form>
+
+    <div class="confirmation-message">
+      <p>We'll review your application within 24 hours</p>
+      <p>Questions? We're always here to help! 💙</p>
+    </div>
+  </div>
+</div>
+
+{% if success %}
+  <div id="success-toast" class="toast-popup">
+    <strong>Application submitted! 🎉</strong>
+    <p>We'll review your permit application and get back to you within 24hrs.<br>Safe travel ahead.</p>
+  </div>
+{% endif %}
+
+<script>
+  window.onload = function() {
+    const toast = document.getElementById('success-toast');
+    if (toast) {
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.style.display = 'none', 500);
+      }, 5000); // hide after 5 seconds
+    }
+  }
+</script>
+
+{% endblock %}
