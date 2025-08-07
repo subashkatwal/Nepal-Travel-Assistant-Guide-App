@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.auth import get_user_model
 from django.contrib.auth import login as auth_login, logout as auth_logout
 from django.contrib import messages
@@ -9,6 +9,7 @@ import os
 import pickle
 import pandas as pd
 from django.conf import settings
+from .models import Product,Category
 
 User = get_user_model()
 
@@ -112,7 +113,7 @@ def recommend_places(category, min_budget, max_budget):
 
 
 # 🔹 View for recommendations
-@login_required
+# @login_required
 def destination(request):
     recommendations = None
 
@@ -131,16 +132,14 @@ def destination(request):
     return render(request, "destinations.html", {"recommendations": recommendations_list})
 
 
-@login_required
+# @login_required
 def local_pricing(request):
     return render(request, 'local-pricing.html')
 
 
-
-@login_required
 def packages(request):
-    return render(request, 'packages.html')
-
+    products = Product.objects.all()
+    return render(request, 'packages.html', {'products': products})
 
 @login_required
 def profile(request):
@@ -153,6 +152,19 @@ def login_form(request):
 def signup_form(request):
     return render(request, 'signup.html')
 
+
+def shop_view(request):
+    category_name = request.GET.get('category', None)
+    categories = Category.objects.all()
+    if category_name:
+        products = Product.objects.filter(category__cname=category_name)
+    else:
+        products = Product.objects.all()
+    return render(request, "shop.html", {
+        "products": products,
+        "selected_category": category_name,
+        "categories": categories,
+    })
 
 def permit(request):
     success = False
@@ -170,3 +182,70 @@ def permit(request):
 
 
 
+#cart
+def shop_view(request):
+    products = Product.objects.all()
+    cart = request.session.get("cart", {})
+
+    cart_count = 0
+    if isinstance(cart, dict):
+        cart_count = sum(cart.values())
+    elif isinstance(cart, list):
+        cart_count = len(cart)
+
+    return render(request, "shop.html", {
+        "products": products,
+        "cart_count": cart_count
+    })
+
+
+
+def add_to_cart(request, pk):
+    cart = request.session.get("cart", [])
+    if pk not in cart:
+        cart.append(pk)
+    request.session["cart"] = cart
+    return redirect("cart_page")
+
+def view_cart(request):
+    cart = request.session.get("cart", {})
+    product_ids = cart.keys()
+    products = Product.objects.filter(id__in=product_ids)
+    
+    # annotate each product with quantity from cart
+    for product in products:
+        product.quantity = cart.get(str(product.id), 0)
+
+    total_price = sum(product.price * product.quantity for product in products)
+    
+    return render(request, "cart.html", {
+        "products": products,
+        "total_price": total_price
+    })
+
+def remove_from_cart(request, pk):
+    cart = request.session.get("cart", [])
+    if pk in cart:
+        cart.remove(pk)
+    request.session["cart"] = cart
+    return redirect("cart_page")
+
+from django.http import JsonResponse
+
+def add_to_cart(request, pk):
+    cart = request.session.get("cart", {})
+
+    if isinstance(cart, list):
+        new_cart = {}
+        for item in cart:
+            new_cart[str(item)] = new_cart.get(str(item), 0) + 1
+        cart = new_cart
+    cart[str(pk)] = cart.get(str(pk), 0) + 1
+
+    # Save back to session
+    request.session["cart"] = cart
+
+    # Calculate cart count (total quantity)
+    cart_count = sum(cart.values())
+
+    return JsonResponse({"cart_count": cart_count})

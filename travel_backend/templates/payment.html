@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Payment - Nepal Guide{% endblock %}
+
+{% block content %}
+<h1>Payment Page</h1>
+<p>Click confirm to simulate payment.</p>
+
+<a href="{% url 'payment_success' %}" class="add-cart">Confirm Payment</a>
+{% endblock %}

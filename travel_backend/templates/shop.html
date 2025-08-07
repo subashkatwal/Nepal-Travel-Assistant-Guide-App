@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Nepal Travel Shop - Nepal Guide{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/shop.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="shop-page">
+
+<a href="{% url 'cart_page' %}" class="cart-btn">
+  <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">{{ cart_count }}</span>)
+</a>
+  </a>
+  <h1 class="shop-heading">Nepal Travel Shop</h1>
+  <p class="shop-subtitle">
+    Everything you need for an amazing Nepal adventure - from essential trekking gear to authentic cultural souvenirs
+  </p>
+
+  <!-- Filter Buttons -->
+ <div class="filter-buttons">
+  <a href="{% url 'shop' %}" class="filter-btn {% if not selected_category %}active{% endif %}">All</a>
+  <a href="{% url 'shop' %}?category=Trekking Gear" class="filter-btn {% if selected_category == 'Trekking Gear' %}active{% endif %}">Trekking Gear</a>
+  <a href="{% url 'shop' %}?category=Souvenirs" class="filter-btn {% if selected_category == 'Souvenirs' %}active{% endif %}">Souvenirs</a>
+  <a href="{% url 'shop' %}?category=Guides & Tours" class="filter-btn {% if selected_category == 'Guides & Tours' %}active{% endif %}">Guides & Tours</a>
+</div>
+
+  <!-- Shop Items -->
+  <div class="shop-grid">
+    {% for product in products %}
+    <div class="shop-card">
+      <div class="shop-image">
+        {% if product.image %}
+        <img src="{{ product.image.url }}" alt="{{ product.product_name }}">
+        {% else %}
+        <img src="{% static 'images/chitwan.png' %}" alt="No Image">
+        {% endif %}
+      </div>
+
+      <div class="shop-info">
+        <h2 class="shop-title">{{ product.product_name }}</h2>
+        <p class="shop-description">{{ product.description }}</p>
+        <span class="shop-price">NPR {{ product.price }}</span>
+
+        <a href="{% url 'add_cart' product.id %}" class="add-to-cart-btn">
+          <i class="fas fa-box"></i> Add to Cart
+        </a>
+      </div>
+    </div>
+    {% empty %}
+    <p>No products available at the moment.</p>
+    {% endfor %}
+  </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Select all add-to-cart buttons
+  const buttons = document.querySelectorAll('.add-to-cart-btn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const productId = button.getAttribute('data-id');
+      if (!productId) return;
+
+      fetch(`/cart/add/${productId}/`, {
+        method: 'POST',
+        headers: {
+          'X-CSRFToken': getCookie('csrftoken'),
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({}), // or empty body since backend just needs pk in URL
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Update the cart count display inside the cart button
+        const cartBtn = document.querySelector('.cart-btn');
+        if (cartBtn) {
+          // Check if count span exists, else create it
+          let countSpan = cartBtn.querySelector('.cart-count');
+          if (!countSpan) {
+            countSpan = document.createElement('span');
+            countSpan.classList.add('cart-count');
+            countSpan.style.marginLeft = '6px';
+            countSpan.style.backgroundColor = '#f44336';
+            countSpan.style.color = 'white';
+            countSpan.style.borderRadius = '50%';
+            countSpan.style.padding = '2px 6px';
+            countSpan.style.fontSize = '0.85rem';
+            countSpan.style.fontWeight = 'bold';
+            cartBtn.appendChild(countSpan);
+          }
+          countSpan.textContent = data.cart_count;
+        }
+      })
+      .catch(err => {
+        console.error('Error adding to cart:', err);
+      });
+    });
+  });
+
+  // Helper function to get CSRF token from cookies
+  function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+      const cookies = document.cookie.split(';');
+      for (let cookie of cookies) {
+        cookie = cookie.trim();
+        if (cookie.startsWith(name + '=')) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+});
+</script>
+
+{% endblock %}

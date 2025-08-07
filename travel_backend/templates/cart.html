@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Shopping Cart - Nepal Guide{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="cart-container">
+  <h1 class="cart-title">Shopping Cart</h1>
+  <p class="cart-subtitle">Review your items before checkout</p>
+
+  {% if products %}
+    {% for product in products %}
+      <div class="cart-item">
+        <div class="item-name">{{ product.product_name }}</div>
+        <div class="item-price">NPR {{ product.price }}</div>
+      </div>
+    {% endfor %}
+
+    <div class="order-summary">
+      <h3 class="summary-title">Order Summary</h3>
+
+      {% for product in products %}
+        <div class="summary-item">
+          <span>{{ product.product_name }} x 1</span>
+          <span>NPR {{ product.price }}</span>
+        </div>
+      {% endfor %}
+
+      <div class="summary-total">
+        <span>Total</span>
+        <span>NPR {{ total_price }}</span>
+      </div>
+    </div>
+
+    <div class="cart-actions">
+      <a href="{% url 'shop' %}" class="btn btn-secondary">Continue Shopping</a>
+      <button class="btn btn-primary">Proceed to Checkout</button>
+    </div>
+
+  {% else %}
+    <div class="empty-cart">
+      🛒 Your cart is empty.<br>
+      <a href="{% url 'shop' %}" class="empty-cart-link">Go Shopping</a>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

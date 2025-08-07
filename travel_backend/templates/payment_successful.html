@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Payment Successful - Nepal Guide{% endblock %}
+
+{% block content %}
+<h1>Payment Successful!</h1>
+<p>Thank you for your purchase. Your order has been confirmed.</p>
+<a href="{% url 'packages' %}" class="add-cart">Go Back to Shop</a>
+{% endblock %}
