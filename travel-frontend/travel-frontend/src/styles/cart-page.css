@@ -1,0 +1,221 @@
+/* Body & Wrapper */
+.cart-page-wrapper {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7f3;
+}
+
+.cart-main-section {
+  padding: 2rem 0 4rem;
+}
+
+.cart-content-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cart-page-title {
+  text-align: center;
+  color: #29563C;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.cart-empty-msg {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Cart Item Card */
+.cart-items-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 0.75rem;
+}
+
+.cart-item-name {
+  flex: 2;
+  font-weight: 600;
+  color: #1c293b;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-btn {
+  background: #29563C;
+  color: #fff;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background: #1c4030;
+}
+
+.cart-item-qty {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.cart-item-total {
+  flex: 1;
+  text-align: right;
+  font-weight: 600;
+  color: #29563C;
+}
+
+.cart-item-remove {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cart-item-remove:hover {
+  color: #c82333;
+}
+
+/* Cart Summary */
+.cart-summary {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #1c293b;
+}
+
+/* Buttons side by side */
+.cart-summary-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.process-btn,
+.download-receipt-btn {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.process-btn {
+  background-color: #29563c;
+  color: #fff;
+}
+
+.process-btn:hover {
+  background-color: #1c4030;
+  transform: translateY(-2px);
+}
+
+.download-receipt-btn {
+  background-color: #d2b48c;
+  color: #1c293b;
+}
+
+.download-receipt-btn:hover {
+  background-color: #c19a65;
+  transform: translateY(-2px);
+}
+
+/* Empty Cart After Payment */
+.cart-empty-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.cart-empty-section h2 {
+  font-size: 1.8rem;
+  color: #29563C;
+  margin-bottom: 1rem;
+}
+
+.cart-empty-section p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.cart-empty-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.continue-shopping-btn,
+.back-home-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.continue-shopping-btn {
+  background: #d2b48c;
+  color: #1c293b;
+}
+
+.continue-shopping-btn:hover {
+  background: #c19a65;
+  transform: translateY(-2px);
+}
+
+.back-home-btn {
+  background: #29563C;
+  color: #fff;
+}
+
+.back-home-btn:hover {
+  background: #1c4030;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-item-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .cart-summary-buttons {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,6 @@
+@import "./login.css";
+
+/* Ensure full height and consistent look */
+.auth-container {
+  min-height: 100vh;
+}

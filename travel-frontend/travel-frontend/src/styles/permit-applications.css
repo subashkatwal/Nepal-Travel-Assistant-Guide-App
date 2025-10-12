@@ -1,0 +1,302 @@
+/* Container & Body */
+.permit-applications-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #29563C 0%, #1e3c2b 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header Section */
+.permit-header {
+  background: #29563C;
+  padding: 3rem 0 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+  background-color: #c4d5b0;
+}
+
+.header-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header-icon {
+  font-size: 2.5rem;
+  color: #d2b48c;
+  margin-bottom: 0.5rem;
+}
+
+.permit-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #29563C;
+}
+
+.header-description {
+  font-size: 0.95rem;
+  color: #29563C;
+}
+
+/* Main Content */
+.permit-main {
+  padding: 2rem 0 4rem;
+}
+
+/* Card Layout */
+.permit-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2.5rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #29563C;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.permit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Titles */
+.form-section h2,
+.form-section h3 {
+  color: #29563C;
+  font-weight: 600;
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Permit Type Selector */
+.permit-type-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.permit-type-option {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.permit-type-option:hover {
+  border-color: #29563C;
+  background: #fff;
+}
+
+.permit-type-option.selected {
+  border-color: #29563C;
+  background: #f0fff4;
+}
+
+.option-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.option-icon {
+  font-size: 1.5rem;
+  color: #d2b48c;
+}
+
+.option-text strong {
+  color: #29563C;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #29563C;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.input-icon {
+  color: #d2b48c;
+  font-size: 1rem;
+}
+
+/* Inputs & Selects */
+.form-group input,
+.form-group select {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f8f9fa;
+  color: #29563C;
+  transition: all 0.3s ease;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: #29563C;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #29563C;
+  background: #fff;
+}
+
+/* Duration Input */
+.duration-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.duration-input:hover,
+.duration-input:focus-within {
+  border-color: #29563C;
+}
+
+.duration-btn {
+  background: #29563C;
+  color: #fff;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.duration-btn:hover {
+  background: #22354b;
+}
+
+.duration-btn:active {
+  transform: scale(0.95);
+}
+
+.duration-input input {
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 60px;
+  outline: none;
+  color: #29563C;
+}
+
+/* File Upload */
+.file-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #e9ecef;
+  border-radius: 8px;
+  padding: 2rem;
+  cursor: pointer;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.file-upload-label:hover {
+  border-color: #29563C;
+  background: #fff;
+}
+
+.upload-icon {
+  font-size: 2rem;
+  color: #d2b48c;
+  margin-bottom: 1rem;
+}
+
+.upload-text {
+  color: #29563C;
+  font-weight: 500;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #29563C;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: #22354b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(41, 86, 60, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .permit-header {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .permit-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .permit-card {
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .permit-type-selector {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .permit-card {
+    padding: 1.5rem;
+  }
+
+  .duration-input input {
+    width: 50px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}

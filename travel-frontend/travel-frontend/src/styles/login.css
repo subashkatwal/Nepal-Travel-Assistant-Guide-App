@@ -1,0 +1,114 @@
+.auth-container {
+  width: 100%;
+  height: 100vh;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.auth-card button:hover {
+  background: #C2A970;
+  color: #1c293b;
+}
+
+.logo {
+  font-weight: 700;
+  color: #1c293b;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #1c293b;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #f4f4f0;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 0.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1c293b;
+}
+
+.tabs .active {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  color: #1c293b;
+  margin-top: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 0.4rem;
+  background: #f9f9f8;
+}
+
+.btn-submit {
+  width: 100%;
+  background:#29563C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #22354b;
+}
+
+.back-link {
+  display: block;
+  margin-top: 1.2rem;
+  color: #1c293b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ✅ Responsive */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.8rem;
+  }
+}
