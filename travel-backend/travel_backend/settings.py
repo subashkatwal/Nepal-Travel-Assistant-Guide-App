@@ -61,6 +61,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # React Vite
     "http://localhost:3000",  # CRA
+
 ]
 
 
@@ -144,3 +145,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # ALLOWED_HOSTS = ['nepal-travel-guide-1.onrender.com']
 
 ALLOWED_HOSTS =[]
+
+from decouple import config
+
+KHALTI_SECRET_KEY = os.getenv('KHALTI_SECRET_KEY', 'test_secret_key_16b47d7381fe4b489b0e2777942504cc')

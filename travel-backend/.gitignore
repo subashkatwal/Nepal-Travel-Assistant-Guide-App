@@ -1,0 +1,6 @@
+.env
+.env.*
+id_documents/
+__pycache__/
+*.pyc
+db.sqlite3

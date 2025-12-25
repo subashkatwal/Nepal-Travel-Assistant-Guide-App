@@ -1,0 +1,80 @@
+[
+  {
+    "model": "api.product",
+    "pk": 16,
+    "fields": {
+      "title": "Trekking Backpack 60L",
+      "description": "Large capacity trekking backpack suitable for multi-day hikes and mountain tours.",
+      "price": "119.99",
+      "image_url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+      "tags": "Trekking,Backpack,Travel",
+      "category": "general",
+      "stock": 30
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 17,
+    "fields": {
+      "title": "Hiking Boots",
+      "description": "Waterproof hiking boots with strong grip for rough trekking trails.",
+      "price": "149.99",
+      "image_url": "https://images.unsplash.com/photo-1600180758895-6f63c6b8f6fd?auto=format&fit=crop&w=800&q=80",
+      "tags": "Hiking,Footwear,Trekking",
+      "category": "general",
+      "stock": 40
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 18,
+    "fields": {
+      "title": "Trekking Poles",
+      "description": "Lightweight adjustable trekking poles for balance and joint support.",
+      "price": "39.99",
+      "image_url": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80",
+      "tags": "Trekking,Hiking,Equipment",
+      "category": "general",
+      "stock": 60
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 19,
+    "fields": {
+      "title": "Thermal Jacket",
+      "description": "Insulated thermal jacket ideal for cold mountain climates.",
+      "price": "129.99",
+      "image_url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80",
+      "tags": "Trekking,Jacket,Winter",
+      "category": "general",
+      "stock": 25
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 20,
+    "fields": {
+      "title": "Camping Tent (2 Person)",
+      "description": "Compact and weather-resistant tent suitable for trekking and camping tours.",
+      "price": "179.99",
+      "image_url": "https://images.unsplash.com/photo-1504280390368-3971c5f1f8b5?auto=format&fit=crop&w=800&q=80",
+      "tags": "Camping,Trekking,Tent",
+      "category": "general",
+      "stock": 15
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 21,
+    "fields": {
+      "title": "Travel Sleeping Bag",
+      "description": "Warm and lightweight sleeping bag designed for high-altitude trekking.",
+      "price": "89.99",
+      "image_url": "https://images.unsplash.com/photo-1501706362039-c6e13d9a3e46?auto=format&fit=crop&w=800&q=80",
+      "tags": "Camping,Trekking,SleepingBag",
+      "category": "general",
+      "stock": 35
+    }
+  }
+]
