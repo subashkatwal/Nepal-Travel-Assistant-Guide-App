@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { UserContext } from "../context/UserContext.jsx"; 
+import { toast } from "react-toastify";
 import "./../styles/login.css";
 
 export default function Login() {
@@ -8,24 +10,59 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const { loginUser } = useContext(UserContext); 
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    try {
+  try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/login/",{ email, password },
+        "http://127.0.0.1:8000/api/login/",
+        { email, password },
         { withCredentials: true }
       );
-      navigate("/"); // redirect to home after login
+
+      if (res.data.success || res.status === 200) {
+        //  Update context state
+        loginUser(email);
+
+        // Success toast
+        toast.success(`Welcome, ${email}!`, {
+          position: "bottom-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+
+        // ✅ Redirect to home after a short delay
+        setTimeout(() => navigate("/"), 1000);
+      } else {
+        setError("Invalid email or password");
+        toast.error("Invalid email or password", {
+          position: "bottom-center",
+          autoClose: 2000,
+          theme: "colored",
+        });
+      }
     } catch (err) {
-      setError(err.response?.data?.error || "Something went wrong");
+      console.error(err);
+      const msg = err.response?.data?.error || "Something went wrong";
+      setError(msg);
+      toast.error(msg, {
+        position: "bottom-center",
+        autoClose: 2000,
+        theme: "colored",
+      });
     }
   };
 
   return (
     <div className="auth-container">
       <div className="auth-card">
-        <div className="logo"> Nepal Travel</div>
+        <div className="logo">Nepal Travel</div>
         <h2>Welcome</h2>
         <p>Sign in to your account or create a new one</p>
 

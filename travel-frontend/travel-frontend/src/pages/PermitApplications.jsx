@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import jsPDF from "jspdf";
 import { 
   FaFileAlt, FaUser, FaPassport, FaGlobe, FaMapMarkerAlt, 
   FaCalendarAlt, FaUpload, FaFlag, FaIdCard 
 } from "react-icons/fa";
-import Navbar from "../components/Navbar";  // import Navbar
-import Footer from "../components/Footer";  // import Footer
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../styles/permit-applications.css";
 
 export default function PermitApplications() {
@@ -17,8 +18,11 @@ export default function PermitApplications() {
     destination: "",
     duration: 7,
     purpose: "",
-    idDocument: null
+    idDocument: null,
   });
+
+  const [permits, setPermits] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const destinations = [
     "Upper Mustang","Upper Dolpo","Lower Dolpo","Manaslu Circuit",
@@ -28,84 +32,130 @@ export default function PermitApplications() {
   const purposes = ["Trekking","Mountaineering","Research","Photography","Cultural Tour","Adventure Sports"];
   const nationalities = ["United States","United Kingdom","Canada","Australia","Germany","France","Japan","China","India","Other"];
 
-  const handleInputChange = (field, value) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+  // Universal input handler
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  // File input handler
   const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setFormData(prev => ({ ...prev, idDocument: file }));
+    const file = e.target.files?.[0];
+    if (file) setFormData(prev => ({ ...prev, idDocument: file }));
   };
 
-  const handleSubmit = (e) => {
+  // Submit form
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Permit application:", formData);
+    setLoading(true);
+
+    const formDataToSend = new FormData();
+    formDataToSend.append("permit_type", formData.permitType);
+    formDataToSend.append("full_name", formData.fullName);
+    formDataToSend.append("passport_number", formData.passportNumber);
+    formDataToSend.append("citizenship_id", formData.citizenshipId);
+    formDataToSend.append("nationality", formData.nationality);
+    formDataToSend.append("destination", formData.destination);
+    formDataToSend.append("duration", formData.duration);
+    formDataToSend.append("purpose", formData.purpose);
+    if (formData.idDocument) formDataToSend.append("id_document", formData.idDocument);
+
+    try {
+      const res = await fetch("http://localhost:8000/api/permits/apply/", {
+        method: "POST",
+        body: formDataToSend,
+      });
+      if (!res.ok) throw new Error("Failed to submit application");
+      alert("Application submitted successfully!");
+      fetchPermits();
+      setFormData({
+        permitType: "foreign",
+        fullName: "",
+        passportNumber: "",
+        citizenshipId: "",
+        nationality: "",
+        destination: "",
+        duration: 7,
+        purpose: "",
+        idDocument: null,
+      });
+    } catch (err) {
+      console.error(err);
+      alert("Error submitting application");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  /* Helper Components */
+  // Fetch permits
+  const fetchPermits = async () => {
+    try {
+      const res = await fetch("http://localhost:8000/api/permits/all/");
+      if (!res.ok) throw new Error("Failed to fetch permits");
+      const data = await res.json();
+      setPermits(data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-  const PermitOption = ({ selected, icon, title, description, onSelect }) => (
-    <label className={`permit-type-option ${selected ? 'selected' : ''}`} onClick={onSelect}>
-      <input type="radio" hidden />
-      <div className="option-content">
-        <div className="option-icon">{icon}</div>
-        <div className="option-text">
-          <strong>{title}</strong>
-          <span className="option-description">{description}</span>
-        </div>
-      </div>
-    </label>
-  );
+  useEffect(() => {
+    fetchPermits();
+  }, []);
 
-  const FormInput = ({ icon, label, value, onChange, placeholder }) => (
-    <div className="form-group">
-      <label>{icon} {label}</label>
-      <input value={value} onChange={onChange} placeholder={placeholder} required />
-    </div>
-  );
+  // Generate PDF receipt
+  const generatePermitReceipt = (permit) => {
+    const doc = new jsPDF();
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(16);
+    doc.text("Nepal Tourism Permit Receipt", 55, 20);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(12);
+    let y = 40;
+    const gap = 10;
 
-  const FormSelect = ({ icon, label, options, value, onChange }) => (
-    <div className="form-group">
-      <label>{icon} {label}</label>
-      <select value={value} onChange={onChange} required>
-        <option value="">Select {label.toLowerCase()}</option>
-        {options.map((opt, i) => <option key={i} value={opt}>{opt}</option>)}
-      </select>
-    </div>
-  );
+    const lines = [
+      `Name: ${permit.full_name}`,
+      `Permit Type: ${permit.permit_type}`,
+      `Destination: ${permit.destination}`,
+      `Duration: ${permit.duration} days`,
+      `Purpose: ${permit.purpose}`,
+      `Status: ${permit.status}`,
+    ];
+    lines.forEach(line => { doc.text(line, 20, y); y += gap; });
 
-  const DurationInput = ({ duration, onChange }) => (
-    <div className="form-group half">
-      <label><FaCalendarAlt /> Duration (Days)</label>
-      <div className="duration-input">
-        <button type="button" className="duration-btn" onClick={() => onChange(Math.max(1, duration - 1))}>-</button>
-        <input type="number" value={duration} onChange={(e) => onChange(parseInt(e.target.value) || 1)} min="1" max="30" />
-        <button type="button" className="duration-btn" onClick={() => onChange(Math.min(30, duration + 1))}>+</button>
-      </div>
-    </div>
-  );
+    if (permit.status === "approved") {
+      doc.setTextColor(0, 128, 0);
+      doc.text(`Permit ID: ${permit.permit_id}`, 20, y + 5);
+      doc.text("Approved by Nepal Tourism Board", 20, y + 15);
+    } else if (permit.status === "rejected") {
+      doc.setTextColor(255, 0, 0);
+      doc.text("Application Rejected", 20, y + 5);
+      doc.text(`Reason: ${permit.rejection_reason || "Not specified"}`, 20, y + 15);
+    } else {
+      doc.setTextColor(0, 0, 0);
+      doc.text(" Application Pending Approval", 20, y + 5);
+    }
 
-  const FileUpload = ({ file, onChange }) => (
-    <div className="form-section">
-      <h3>Upload ID Document</h3>
-      <div className="file-upload-group">
-        <label htmlFor="idDocument" className="file-upload-label">
-          <FaUpload className="upload-icon" />
-          <span className="upload-text">{file ? file.name : 'Choose File'}</span>
-          <span className="file-chosen">{file ? 'File chosen' : 'No file chosen'}</span>
-        </label>
-        <input type="file" id="idDocument" onChange={onChange} accept=".pdf,.jpg,.jpeg,.png" required />
-      </div>
-    </div>
-  );
+    doc.save(`permit_${permit.id}.pdf`);
+  };
 
-  /* Main JSX */
+  const handleViewReceipt = async (permitId) => {
+    try {
+      const res = await fetch(`http://localhost:8000/api/permits/${permitId}/`);
+      if (!res.ok) throw new Error("Failed to fetch permit");
+      const permitData = await res.json();
+      generatePermitReceipt(permitData);
+    } catch (err) {
+      console.error(err);
+      alert("Could not load permit data.");
+    }
+  };
 
   return (
     <div className="permit-applications-container">
       <Navbar />
 
-      {/* Header */}
       <header className="permit-header">
         <div className="container">
           <div className="header-content">
@@ -118,102 +168,177 @@ export default function PermitApplications() {
         </div>
       </header>
 
-      {/* Main Form */}
       <main className="permit-main">
         <div className="container">
           <div className="permit-card">
             <form onSubmit={handleSubmit} className="permit-form">
+
               {/* Permit Type */}
               <div className="form-section">
                 <h2>Select Permit Type</h2>
                 <div className="permit-type-selector">
-                  <PermitOption 
-                    selected={formData.permitType === 'local'} 
-                    icon={<FaUser />} 
-                    title="Local Tourist" 
-                    description="Nepali citizens"
-                    onSelect={() => handleInputChange('permitType', 'local')}
-                  />
-                  <PermitOption 
-                    selected={formData.permitType === 'foreign'} 
-                    icon={<FaPassport />} 
-                    title="Foreign Tourist" 
-                    description="International visitors"
-                    onSelect={() => handleInputChange('permitType', 'foreign')}
-                  />
+                  <button
+                    type="button"
+                    className={`permit-type-option ${formData.permitType === "local" ? "selected" : ""}`}
+                    onClick={() => setFormData(prev => ({ ...prev, permitType: "local" }))}
+                  >
+                    <FaUser /> Local Tourist
+                  </button>
+
+                  <button
+                    type="button"
+                    className={`permit-type-option ${formData.permitType === "foreign" ? "selected" : ""}`}
+                    onClick={() => setFormData(prev => ({ ...prev, permitType: "foreign" }))}
+                  >
+                    <FaPassport /> Foreign Tourist
+                  </button>
                 </div>
               </div>
 
               {/* Personal Info */}
               <div className="form-section">
-                <FormInput 
-                  icon={<FaUser />} 
-                  label="Full Name" 
-                  value={formData.fullName} 
-                  onChange={(e) => handleInputChange('fullName', e.target.value)}
-                  placeholder="Enter full name"
-                />
-                {formData.permitType === 'foreign' ? (
+                <div className="form-group">
+                  <label><FaUser /> Full Name</label>
+                  <input
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    placeholder="Enter full name"
+                    required
+                  />
+                </div>
+
+                {formData.permitType === "foreign" ? (
                   <>
-                    <FormInput 
-                      icon={<FaPassport />} 
-                      label="Passport Number" 
-                      value={formData.passportNumber} 
-                      onChange={(e) => handleInputChange('passportNumber', e.target.value)}
-                      placeholder="Enter passport number"
-                    />
-                    <FormSelect 
-                      icon={<FaGlobe />} 
-                      label="Nationality" 
-                      options={nationalities} 
-                      value={formData.nationality} 
-                      onChange={(e) => handleInputChange('nationality', e.target.value)}
-                    />
+                    <div className="form-group">
+                      <label><FaPassport /> Passport Number</label>
+                      <input
+                        name="passportNumber"
+                        value={formData.passportNumber}
+                        onChange={handleChange}
+                        placeholder="Enter passport number"
+                        required
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label><FaGlobe /> Nationality</label>
+                      <select name="nationality" value={formData.nationality} onChange={handleChange} required>
+                        <option value="">Select nationality</option>
+                        {nationalities.map((n, i) => <option key={i} value={n}>{n}</option>)}
+                      </select>
+                    </div>
                   </>
                 ) : (
-                  <FormInput 
-                    icon={<FaIdCard />} 
-                    label="Citizenship ID" 
-                    value={formData.citizenshipId || ''} 
-                    onChange={(e) => handleInputChange('citizenshipId', e.target.value)}
-                    placeholder="Enter citizenship number"
-                  />
+                  <div className="form-group">
+                    <label><FaIdCard /> Citizenship ID</label>
+                    <input
+                      name="citizenshipId"
+                      value={formData.citizenshipId}
+                      onChange={handleChange}
+                      placeholder="Enter citizenship number"
+                      required
+                    />
+                  </div>
                 )}
               </div>
 
               {/* Destination & Trip */}
               <div className="form-section">
-                <FormSelect 
-                  icon={<FaMapMarkerAlt />} 
-                  label="Destination" 
-                  options={destinations} 
-                  value={formData.destination} 
-                  onChange={(e) => handleInputChange('destination', e.target.value)}
-                />
+                <div className="form-group">
+                  <label><FaMapMarkerAlt /> Destination</label>
+                  <select name="destination" value={formData.destination} onChange={handleChange} required>
+                    <option value="">Select destination</option>
+                    {destinations.map((d, i) => <option key={i} value={d}>{d}</option>)}
+                  </select>
+                </div>
+
                 <div className="form-row">
-                  <DurationInput 
-                    duration={formData.duration} 
-                    onChange={(value) => handleInputChange('duration', value)}
-                  />
-                  <FormSelect 
-                    icon={<FaFlag />} 
-                    label="Purpose" 
-                    options={purposes} 
-                    value={formData.purpose} 
-                    onChange={(e) => handleInputChange('purpose', e.target.value)}
-                  />
+                  <div className="form-group half">
+                    <label><FaCalendarAlt /> Duration (Days)</label>
+                    <div className="duration-input">
+                      <button type="button" className="duration-btn" onClick={() => setFormData(prev => ({ ...prev, duration: Math.max(1, prev.duration - 1) }))}>-</button>
+                      <input type="number" name="duration" value={formData.duration} min="1" max="30" onChange={handleChange}/>
+                      <button type="button" className="duration-btn" onClick={() => setFormData(prev => ({ ...prev, duration: Math.min(30, prev.duration + 1) }))}>+</button>
+                    </div>
+                  </div>
+
+                  <div className="form-group half">
+                    <label><FaFlag /> Purpose</label>
+                    <select name="purpose" value={formData.purpose} onChange={handleChange} required>
+                      <option value="">Select purpose</option>
+                      {purposes.map((p, i) => <option key={i} value={p}>{p}</option>)}
+                    </select>
+                  </div>
                 </div>
               </div>
 
               {/* File Upload */}
-              <FileUpload 
-                file={formData.idDocument} 
-                onChange={handleFileChange} 
-              />
+              <div className="form-section">
+                <h3>Upload ID Document</h3>
+                <label htmlFor="idDocument" className="file-upload-label">
+                  <FaUpload className="upload-icon" />
+                  <span className="upload-text">{formData.idDocument ? formData.idDocument.name : "Choose File"}</span>
+                </label>
+                <input
+                  type="file"
+                  id="idDocument"
+                  name="idDocument"
+                  style={{ display: "none" }}
+                  onChange={handleFileChange}
+                  accept=".pdf,.jpg,.jpeg,.png"
+                />
+              </div>
 
-              <button type="submit" className="submit-btn">Submit Application</button>
+              <button type="submit" className="submit-btn" disabled={loading}>
+                {loading ? "Submitting..." : "Submit Application"}
+              </button>
             </form>
           </div>
+
+          {/* Permit list */}
+         <div className="permits-list">
+  <h2>Your Submitted Permits</h2>
+
+  {permits.length === 0 ? (
+    <p className="empty-message">
+      You have not submitted any permits yet. Fill out the form above to apply for a tourist permit.
+    </p>
+  ) : (
+    <table className="permit-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Permit Type</th>
+          <th>Destination</th>
+          <th>Duration</th>
+          <th>Purpose</th>
+          <th>Status</th>
+          <th>Receipt</th>
+        </tr>
+      </thead>
+      <tbody>
+        {permits.map(p => (
+          <tr key={p.id}>
+            <td>{p.full_name}</td>
+            <td>{p.permit_type}</td>
+            <td>{p.destination}</td>
+            <td>{p.duration} days</td>
+            <td>{p.purpose}</td>
+            <td className={`status-${p.status.toLowerCase()}`}>
+  {p.status.charAt(0).toUpperCase() + p.status.slice(1)}
+</td>
+            <td>
+              {p.status !== "pending" ? (
+                <button onClick={() => handleViewReceipt(p.id)}>Download</button>
+              ) : "Pending"}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )}
+</div>
         </div>
       </main>
 

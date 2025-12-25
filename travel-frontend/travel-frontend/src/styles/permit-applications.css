@@ -300,3 +300,89 @@
     width: 100%;
   }
 }
+
+
+.permits-list {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-top: 5px solid #29563C;
+  text-align: center;
+}
+
+.permits-list h2 {
+  color: #29563C;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.permits-list p.empty-message {
+  color: #29563C;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Table Styling */
+.permit-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.permit-table th, 
+.permit-table td {
+  padding: 12px 15px;
+  border: 1px solid #e9ecef;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #29563C;
+}
+
+.permit-table th {
+  background: #c4d5b0;
+  color: #29563C;
+  font-weight: 600;
+}
+
+.permit-table tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.permit-table tr:hover {
+  background: #e6f0d9;
+  cursor: pointer;
+}
+
+.status-approved {
+  color: green;
+  font-weight: 600;
+}
+
+.status-pending {
+  color: orange;
+  font-weight: 600;
+}
+
+.status-rejected {
+  color: red;
+  font-weight: 600;
+}
+
+.permit-table button {
+  background: #29563C;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.permit-table button:hover {
+  background: #22354b;
+}
